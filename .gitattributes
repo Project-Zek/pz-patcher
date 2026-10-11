@@ -1,0 +1,2 @@
+# Keep hashed client downloads byte-identical, including XML and spell data.
+client/** -text
