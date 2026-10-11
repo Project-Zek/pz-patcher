@@ -52,10 +52,29 @@ namespace EQEmu_Patcher {
             graphicsChoice.SelectedIndexChanged+=(s,e)=>SaveLaunchOptions();frameChoice.SelectedIndexChanged+=(s,e)=>SaveLaunchOptions();
             resolutionChoice.SelectedIndexChanged+=(s,e)=>SaveLaunchOptions();
             Controls.AddRange(new Control[]{graphicsLabel,graphicsChoice,frameLabel,frameChoice,resolutionLabel,resolutionChoice,displayHint,displayRepair,runtimeInstall,classicFixes});
+            var notices=new ContextMenuStrip();
+            notices.Items.Add("License notices",null,(s,e)=>ShowLicenseNotices());
+            ContextMenuStrip=notices;splashLogo.ContextMenuStrip=notices;
             PopulateDisplayChoices();
             int fitHeight=Math.Max(526,Math.Min(680,Screen.PrimaryScreen.WorkingArea.Height-50));
             if(fitHeight<ClientSize.Height)ClientSize=new Size(640,fitHeight);
             FormClosing+=(s,e)=>{if(isPatching){cts.Cancel();e.Cancel=true;StatusLibrary.Log("Cancelling the update safely. Wait for it to finish before closing.");}};
+        }
+        internal static void ShowLicenseNotices() {
+            using(var window=new Form {Text="Project Zek - License notices",Width=760,Height=580,StartPosition=FormStartPosition.CenterScreen}) {
+                var text=new TextBox {Multiline=true,ReadOnly=true,ScrollBars=ScrollBars.Both,Dock=DockStyle.Fill,WordWrap=false,
+                    Text=System.Text.Encoding.UTF8.GetString(Client.EmbeddedBytes("ProjectZek.LicenseNotices"))};
+                window.Controls.Add(text);window.ShowDialog();
+            }
+        }
+        internal static string ResolveManifestUrl(string configured,string built) {
+            string value=String.IsNullOrWhiteSpace(configured)?(built??"").Trim():configured.Trim();
+            if(value.Length==0)return "";
+            Uri uri;
+            if(!Uri.TryCreate(value,UriKind.Absolute,out uri)||uri.Scheme!="https"||uri.UserInfo.Length!=0||
+                !(uri.AbsolutePath.EndsWith(".yml",StringComparison.OrdinalIgnoreCase)||uri.AbsolutePath.EndsWith(".yaml",StringComparison.OrdinalIgnoreCase)))
+                throw new IOException("Set ManifestUrl to a direct HTTPS .yml or .yaml address in Project-Zek-Patcher.exe.config.");
+            return value;
         }
         void LoadLaunchOptions() {
             loadingLaunchOptions=true;
@@ -104,24 +123,31 @@ namespace EQEmu_Patcher {
                     throw new IOException("This manifest uses the older Zeal/ layout. The server manifest must be updated for this client release before patching or playing.");
                 if(names.Any(x=>new[]{"gequip5.s3d","global6_chr.s3d","bmpwad8.s3d","eqfeart7.pak","spellsnew.edd","spellsnew.eff"}.Contains(x,StringComparer.OrdinalIgnoreCase)))
                     throw new IOException("This patcher creates classic models, screens and effects locally. Remove those client asset files from the published download manifest.");
-                foreach(string required in new[]{"Zeal.asi","eqgame.dll","LaunchSupport/files.sha256"})
+                foreach(string required in new[]{"Zeal.asi","eqgame.dll"})
                     if(!names.Contains(required,StringComparer.OrdinalIgnoreCase))
                         throw new IOException("The manifest does not contain the complete current client release: "+required);
                 return result;
             }
         }
         void VerifyManifestBeforePlay() {
-            ProjectZekClassic.ClassicFix.VerifyModels(Client.Root);
+            if(ProjectZekClassic.ClassicFix.HasIncomplete(Client.Root))
+                throw new IOException("A classic fix stopped during installation. Use Classic fixes > Restore before playing.");
             var transaction=new PatchTransaction(Client.Root);
             if(File.Exists(transaction.Marker))throw new IOException("An update stopped during installation. Restore its transaction backup before playing.");
             var manifest=ReadManifest();
             foreach(var entry in manifest.downloads) {
                 string path=transaction.Resolve(entry.name);
+                // Resolve every path before skipping optional audio/definitions.
+                // Patch still validates their current downloaded MD5; Play must
+                // also work when an external music pack is updated or absent.
+                if(ProjectZekClassic.MusicDefinitionAssets.IsOptionalMusicAsset(entry.name))continue;
                 if(!File.Exists(path)||new FileInfo(path).Length!=entry.size||!String.Equals(PatchTransaction.Md5(path),entry.md5,StringComparison.OrdinalIgnoreCase))
                     throw new IOException("Press Patch to repair this missing or mismatched file: "+entry.name);
             }
             foreach(var entry in manifest.deletes??new System.Collections.Generic.List<FileEntry>()) {
-                if(File.Exists(transaction.Resolve(entry.name)))throw new IOException("Press Patch to finish removing an obsolete file: "+entry.name);
+                string path=transaction.Resolve(entry.name);
+                if(ProjectZekClassic.MusicDefinitionAssets.IsOptionalMusicAsset(entry.name))continue;
+                if(File.Exists(path))throw new IOException("Press Patch to finish removing an obsolete file: "+entry.name);
             }
         }
     }

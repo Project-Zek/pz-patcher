@@ -68,7 +68,7 @@ class PatcherFormTests {
                 type.GetMethod("StartPatch",BindingFlags.NonPublic|BindingFlags.Instance).Invoke(form,null);
                 Check(!(bool)type.GetField("isPatching",BindingFlags.NonPublic|BindingFlags.Instance).GetValue(form),"Review started patching");
             });
-            Test("compiled patcher launch core verifies the SHA-256 package and audited base",()=>client.GetMethod("Verify",BindingFlags.NonPublic|BindingFlags.Static).Invoke(null,null));
+            Test("compiled patcher launch core checks required files without a pinned SHA list",()=>client.GetMethod("Verify",BindingFlags.NonPublic|BindingFlags.Static).Invoke(null,null));
             var utility=assembly.GetType("EQEmu_Patcher.UtilityLibrary");
             Test("compiled bootstrap rejects HTTP metadata",()=>{
                 var task=(System.Threading.Tasks.Task<string>)utility.GetMethod("DownloadFile").Invoke(null,new object[]{new System.Threading.CancellationTokenSource(),"http://example.invalid/manifest","filelist.yml"});
@@ -79,7 +79,7 @@ class PatcherFormTests {
                 Check(task.GetAwaiter().GetResult().Contains("Unsafe"),"Bootstrap accepted traversal");
             });
             string path=Path.Combine(args[1],"music/pvp_quake_good.mp3");byte[] old=File.ReadAllBytes(path);
-            Test("compiled patcher blocks Play after a missing music asset",()=>{try{File.Delete(path);Reject(form);}finally{File.WriteAllBytes(path,old);}});
+            Test("compiled patcher permits Play without optional PvP event music",()=>{try{File.Delete(path);Verify(form);}finally{File.WriteAllBytes(path,old);}});
             path=Path.Combine(args[1],"LaunchSupport/patch-incomplete.txt");
             Test("compiled patcher blocks Play after an interrupted installation",()=>{try{File.WriteAllText(path,"review transaction");Reject(form);}finally{File.Delete(path);}});
             Test("compiled patcher Play handler refuses during patching and initial load",()=>{

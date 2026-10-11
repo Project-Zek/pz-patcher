@@ -1,5 +1,5 @@
 param(
-    [string]$Version='1.0.14.0',
+    [string]$Version='1.0.17.0',
     [string]$FileName='Project-Zek-Patcher',
     [string]$ManifestUrl,
     [string]$OutputDirectory,
@@ -39,7 +39,6 @@ function Invoke-NativeBuild([string]$Executable, [string[]]$Arguments, [string]$
 try {
     if($Version -notmatch '^\d+\.\d+\.\d+\.\d+$') {throw 'Use a four-part numeric assembly version.'}
     if($FileName -notmatch '^[A-Za-z0-9_-]{1,64}$') {throw 'Use a simple executable basename without slash or extension.'}
-    if($Online -and -not $ManifestUrl) {throw 'An online build requires -ManifestUrl with the published current release.'}
     if($ManifestUrl) {
         $endpoint=$null
         if(-not [Uri]::TryCreate($ManifestUrl,[UriKind]::Absolute,[ref]$endpoint) -or $endpoint.Scheme -ne 'https' -or $endpoint.AbsolutePath -notmatch '\.ya?ml$' -or $endpoint.UserInfo) {throw 'Use a direct absolute HTTPS .yml/.yaml manifest URL without credentials.'}
@@ -55,8 +54,18 @@ try {
     if(Test-Path -LiteralPath $release) {throw 'Choose a new output directory.'}
     [void](New-Item -ItemType Directory -Path $release)
     $solution=Join-Path $PSScriptRoot 'EQEmu Patcher\EQEmu Patcher.sln'
-    $code=Invoke-NativeBuild $MSBuild @($solution,'/t:Restore','/p:RestorePackagesConfig=true','/nologo','/v:minimal') (Join-Path $release 'restore.log')
-    if($code) {throw 'Restore failed; read restore.log.'}
+    $cachedPackages=Join-Path (Split-Path $PSScriptRoot -Parent) 'Dependency-Cache\packages'
+    if(Test-Path -LiteralPath $cachedPackages) {
+        $packages=Join-Path $PSScriptRoot 'EQEmu Patcher\packages'
+        if(-not(Test-Path -LiteralPath $packages)) {[void](New-Item -ItemType Directory -Path $packages)}
+        Get-ChildItem -LiteralPath $cachedPackages -Force | ForEach-Object {
+            Copy-Item -LiteralPath $_.FullName -Destination $packages -Recurse -Force
+        }
+        [IO.File]::WriteAllText((Join-Path $release 'restore.log'),'Using bundled pinned dependencies, including .NET Framework reference assemblies.')
+    } else {
+        $code=Invoke-NativeBuild $MSBuild @($solution,'/t:Restore','/p:RestorePackagesConfig=true','/nologo','/v:minimal') (Join-Path $release 'restore.log')
+        if($code) {throw 'Restore failed; read restore.log.'}
+    }
     $arguments=@($solution,'/t:Rebuild','/p:Configuration=Release','/p:Platform=Any CPU',"/p:VERSION=$Version","/p:FILE_NAME=$FileName",'/nologo','/v:minimal')
     if($ManifestUrl) {$arguments+="/p:FILELIST_URL=$ManifestUrl"}
     if($Online) {$arguments+='/p:OnlinePatcher=true'}

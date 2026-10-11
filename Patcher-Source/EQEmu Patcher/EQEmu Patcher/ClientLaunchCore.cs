@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
@@ -39,27 +38,21 @@ internal static partial class Client
         }
         return path;
     }
-    static string Digest(string path) { using(var sha=SHA256.Create()) using(var f=File.OpenRead(path))
-        return BitConverter.ToString(sha.ComputeHash(f)).Replace("-","").ToLowerInvariant(); }
-    static void CheckList(string manifest)
-    {
-        var lines=File.ReadAllLines(PathFor(manifest));
-        if(lines.Length==0) throw new IOException("Verification list is empty.");
-        foreach(string line in lines) {
-            if(String.IsNullOrWhiteSpace(line)) continue;
-            var parts=line.Split('\t');
-            if(parts.Length!=2 || parts[0].Length!=64 || !parts[0].All(c=>"0123456789abcdef".Contains(c)))
-                throw new IOException("Verification list is invalid.");
-            string file=PathFor(parts[1]);
-            if(!File.Exists(file)) throw new IOException("Missing file: "+parts[1]+". Run the patcher again.");
-            if(Digest(file)!=parts[0] && !ProjectZekClassic.ClassicFix.ApprovedAsset(Root,parts[1])) throw new IOException("File needs repair: "+parts[1]+". Run the patcher again.");
+    internal static byte[] EmbeddedBytes(string name) {
+        using(var input=typeof(Client).Assembly.GetManifestResourceStream(name)) {
+            if(input==null) throw new IOException("A built-in patcher resource is missing.");
+            using(var output=new MemoryStream()) {input.CopyTo(output);return output.ToArray();}
         }
     }
     internal static void Verify()
     {
-        CheckList("LaunchSupport/files.sha256");
-        CheckList("LaunchSupport/baseline.sha256");
-        ProjectZekClassic.ClassicFix.VerifyModels(Root);
+        // The current downloaded MD5 manifest owns release integrity. No pinned
+        // launch SHA list or base-client fingerprint survives a normal update.
+        foreach(string required in new[]{"eqgame.exe","eqmain.dll","eqgfx_dx8.dll","mss32.dll","Zeal.asi","eqgame.dll","eqw.dll","D3D8.dll"})
+            if(!File.Exists(PathFor(required)) || new FileInfo(PathFor(required)).Length==0)
+                throw new IOException("Missing client file: "+required+". Press Patch or use a supported TAKPv22 client.");
+        if(ProjectZekClassic.ClassicFix.HasIncomplete(Root))
+            throw new IOException("A classic fix stopped during installation. Use Classic fixes > Restore before playing.");
         var allowed=new HashSet<string>(new[]{"Zeal.asi","mssmp3.asi","mssvoice.asi"},StringComparer.OrdinalIgnoreCase);
         foreach(string f in Directory.GetFiles(Root,"*.asi")) if(!allowed.Contains(Path.GetFileName(f)))
             throw new IOException("Move this extra plugin outside the client folder: "+Path.GetFileName(f)+". Plugin backups also load.");
@@ -103,9 +96,10 @@ internal static partial class Client
         if(repair) SetIni("eqclient.ini","EqwGeneral","DebugLogLevel","2",false);
         if(renderer!="keep") {
             if(renderer!="d3d11" && renderer!="d3d12" && renderer!="d3d12-quality") throw new IOException("Choose a supported graphics mode.");
-            string target=PathFor("dgVoodoo.conf"), source=PathFor("LaunchSupport/profiles/"+renderer+".conf");
-            if(!File.Exists(target) || Digest(target)!=Digest(source)) {
-                Backup(target); File.Copy(source,target,true);
+            string target=PathFor("dgVoodoo.conf");
+            byte[] profile=EmbeddedBytes("ProjectZek.Graphics."+renderer);
+            if(!File.Exists(target) || !File.ReadAllBytes(target).SequenceEqual(profile)) {
+                Backup(target); File.WriteAllBytes(target,profile);
             }
         }
     }
@@ -115,8 +109,10 @@ internal static partial class Client
             File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System),"vcruntime140.dll"));
     }
     internal static void Runtime() {
-        Verify(); Idle();
-        Process.Start(new ProcessStartInfo(PathFor("LaunchSupport/prerequisites/vc_redist.x86.exe"),"/install") {UseShellExecute=true});
+        Idle();
+        // Microsoft owns this stable x86 download. No installer is bundled or
+        // executed automatically; the player's browser handles the download.
+        Process.Start(new ProcessStartInfo("https://aka.ms/vc14/vc_redist.x86.exe") {UseShellExecute=true});
     }
     internal static void SelectFps(int fps) {
         if(!new[]{0,60,120,144,240,300}.Contains(fps)) throw new IOException("Choose a supported frame limit.");

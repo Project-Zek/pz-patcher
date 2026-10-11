@@ -1,7 +1,13 @@
-# Project Zek patcher source — 1.0.14.0
+# Project Zek patcher source — 1.0.17.0
 
-Graphics, Zeal frame limit and supported client resolutions are configurable and remembered. EQW renders windowed and clears exclusive fullscreen refresh; the patcher refresh selector and monitor-changing helper were removed after owner testing. Windows controls the monitor refresh rate. Old refreshRate YAML keys are ignored and omitted on the next save without resetting graphics/FPS/resolution preferences.
+The patcher downloads and repairs the client files listed in the current MD5 manifest, then launches the game and closes. Graphics, Zeal frame limit and resolution choices are remembered. All integrated Classic fixes and optional music settings remain included. Windows controls monitor refresh; there is no refresh selector.
 
-All Classic fixes, optional music state, download/repair and verified Play behavior remain included. The executable and window title are Project-Zek-Patcher. The supplied build uses local files only; downloads are disabled until an online build is configured. Build-Patcher.ps1 can build an online patcher when supplied a real HTTPS manifest URL. No display host is built or deployed. Tests/DisplayOptionsTests.cs and DisplayPolicyTests.cs check preferences, supported resolutions and layout; PatcherFormTests.cs and music tests check the retained flows without starting a game or changing display hardware.
+App.config points to the current Project-Zek/pz-patcher manifest. Publish the manifest and all referenced files before distributing the configured patcher. See the repository's HOSTING.md for the upload order and future updates. The separate music pack is optional for Play.
 
-Build-Patcher.ps1 and the project defaults produce Project-Zek-Patcher.exe, including the matching self-update filename and Windows product metadata.
+Build an online executable with VS2022 and .NET Framework 4.8 tools:
+
+    .\Build-Patcher.ps1 -Online -ManifestUrl "https://raw.githubusercontent.com/Project-Zek/pz-patcher/main/filelist.yml"
+
+Without -Online, the source defaults to explicit offline test mode. The script uses the sibling pinned Dependency-Cache when available; otherwise it restores NuGet dependencies. The complete native Zeal, eqgame.dll and EQW sources are in the separate All-Fixes-1.0.17 source bundle. This repository folder contains the patcher source.
+
+The patcher uses the downloaded manifest's current MD5 values rather than fixed launch SHA lists. Zeal.asi and eqgame.dll must still be released as a matched native pair. Appearance changes rebuild the user's local assets through Classic fixes; base client archives and music are not part of the core hosted patch.

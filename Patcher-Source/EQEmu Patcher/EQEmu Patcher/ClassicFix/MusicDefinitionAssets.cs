@@ -23,6 +23,17 @@ namespace ProjectZekClassic {
     }
     internal static class MusicDefinitionAssets {
         static readonly string[] SupportFiles={"LaunchSupport/classic-music-definitions.json","LaunchSupport/classic-music-definitions.zip","LaunchSupport/classic-music-files.sha256"};
+        static readonly string[] PvpEventTracks={"music/pvp_quake_evil.mp3","music/pvp_quake_good.mp3","music/pvp_quake_neutral.mp3"};
+        // Event recordings are supplied separately and may be replaced without
+        // changing the Classic zone/music catalog or rebuilding the patcher.
+        internal static bool IsPvpEventTrack(string path) {
+            return PvpEventTracks.Contains((path??"").Replace('\\','/'),StringComparer.OrdinalIgnoreCase);
+        }
+        internal static bool IsOptionalMusicAsset(string path) {
+            string name=(path??"").Replace('\\','/');
+            return Regex.IsMatch(name,@"\Amusic/[A-Za-z0-9_.-]{1,100}\.(mp3|wav)\z",RegexOptions.IgnoreCase)||
+                IsDefinition(name.ToLowerInvariant())||SupportFiles.Contains(name,StringComparer.OrdinalIgnoreCase);
+        }
         [DllImport("kernel32.dll",CharSet=CharSet.Unicode)]
         static extern uint GetPrivateProfileString(string section,string key,string fallback,StringBuilder value,uint size,string file);
         static bool EnabledKey(string root,string key) {
@@ -50,6 +61,7 @@ namespace ProjectZekClassic {
                 if(!File.Exists(file)||new FileInfo(file).Length!=row.bytes||ClassicFix.HashFile(file)!=row.sha256)applied=false;
             }
             return saved+(applied?"Zone definitions match the installed music pack.":"The music pack is present; select Classic music and Apply to install or update its zone definitions.")+Environment.NewLine+
+                "PvP event music is optional and can be updated separately."+Environment.NewLine+
                 "Client: "+root+Environment.NewLine+"Select Classic music to enable or update it. Clearing the box leaves saved music settings unchanged.";
         }
         internal static bool IsDefinition(string path) {
@@ -79,6 +91,9 @@ namespace ProjectZekClassic {
             var audioNames=new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             foreach(var audio in catalog.audioFiles) {
                 Require(audio!=null&&Regex.IsMatch(audio.path??"",@"\Amusic/[A-Za-z0-9_.-]{1,100}\.(mp3|wav)\z")&&audio.bytes>0&&audio.bytes<=64*1024*1024&&Regex.IsMatch(audio.sha256??"",@"\A[0-9a-f]{64}\z")&&audioNames.Add(audio.path),"Invalid music audio entry.");
+                // These cues are selected by the earthquake packet handler,
+                // independently of ClassicMusic. Zeal loads the installed MP3.
+                if(IsPvpEventTrack(audio.path))continue;
                 string path=ClassicFix.Safe(root,audio.path);
                 Require(File.Exists(path)&&new FileInfo(path).Length==audio.bytes&&ClassicFix.HashFile(path)==audio.sha256,"Music pack audio is missing or changed: "+audio.path+". Reinstall the separate music pack.");
             }

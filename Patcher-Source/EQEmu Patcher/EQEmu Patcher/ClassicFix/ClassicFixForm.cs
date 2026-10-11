@@ -83,6 +83,14 @@ namespace ProjectZekClassic {
                 file.Position=0;return file;
             }catch{file.Dispose();throw;}
         }
+        internal static string ExtractHelper(string client) {
+            string helper=ClassicFix.Safe(client,"ClassicFix/Defender-Helper.ps1");
+            Directory.CreateDirectory(Path.GetDirectoryName(helper));
+            using(var output=new FileStream(helper,FileMode.Create,FileAccess.Write,FileShare.None)) {
+                byte[] bytes=Client.EmbeddedBytes("ProjectZek.DefenderHelper");output.Write(bytes,0,bytes.Length);
+            }
+            return helper;
+        }
         internal static ProcessStartInfo HelperCommand(string helper,string client,bool undo,bool folder,bool process) {
             string system=Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows),"System32");
             return new ProcessStartInfo {FileName=Path.Combine(system,"WindowsPowerShell/v1.0/powershell.exe"),
@@ -91,8 +99,7 @@ namespace ProjectZekClassic {
         void Run(bool undo) {
             if(!undo&&!path.Checked&&!process.Checked){status.Text="Select an exclusion first.";return;}
             try {
-                string helper=Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"ClassicFix-Defender.ps1");
-                if(!File.Exists(helper))throw new IOException("The Defender helper is missing beside this executable.");
+                string helper=ExtractHelper(root);
                 // The UAC broker resolves System32. Sysnative is only visible to a 32-bit
                 // process and cannot be used as the elevated shell's executable path.
                 using(var verified=OpenVerifiedHelper(helper)) {

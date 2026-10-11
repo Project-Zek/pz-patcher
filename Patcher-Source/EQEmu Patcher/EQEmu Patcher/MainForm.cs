@@ -27,7 +27,6 @@ namespace EQEmu_Patcher
         bool isPatching = false;
 
         bool isPendingPatch = false; // This is used to indicate that someone pressed "Patch" before we did some background update checks
-        string myHash; //my MD5 generated hash
 
         bool isLoading;
         bool isAutoPatch = false;
@@ -90,24 +89,9 @@ namespace EQEmu_Patcher
                 return;
             }
 
-            filelistUrl = Assembly.GetExecutingAssembly().GetCustomAttribute<FileListUrl>().Value;
-            if (filelistUrl == "") {
-                MessageBox.Show("This patcher was built incorrectly. Please contact the distributor of this and inform them the file list url is not provided or screenshot this message.", serverName);
-                this.Close();
-                return;
-            }
-            // If a direct YAML URL is provided, don't append suffix; otherwise, ensure trailing slash for suffix-mode
-            isDirectYaml = filelistUrl.EndsWith(".yml", StringComparison.OrdinalIgnoreCase) || filelistUrl.EndsWith(".yaml", StringComparison.OrdinalIgnoreCase);
-            if (!isDirectYaml && !filelistUrl.EndsWith("/")) filelistUrl += "/";
-
-            patcherUrl = Assembly.GetExecutingAssembly().GetCustomAttribute<PatcherUrl>().Value;
-            if (patcherUrl == "")
-            {
-                MessageBox.Show("This patcher was built incorrectly. Please contact the distributor of this and inform them the patcher url is not provided or screenshot this message.", serverName);
-                this.Close();
-                return;
-            }
-            if (!patcherUrl.EndsWith("/")) patcherUrl += "/";
+            filelistUrl=ResolveManifestUrl(System.Configuration.ConfigurationManager.AppSettings["ManifestUrl"],
+                Assembly.GetExecutingAssembly().GetCustomAttribute<FileListUrl>().Value);
+            isDirectYaml=true;
 
             txtList.Visible = false;
             splashLogo.Visible = true;
@@ -202,6 +186,13 @@ namespace EQEmu_Patcher
                 StatusLibrary.Log("Downloads are disabled for this local build. Play verifies the prepared local manifest.");
                 isLoading=false;cts.Cancel();return;
             }
+            if(String.IsNullOrEmpty(filelistUrl)) {
+                isAutoPlay=false;isAutoPatch=false;chkAutoPatch.Checked=false;chkAutoPlay.Checked=false;
+                btnCheck.Enabled=false;btnStart.Enabled=false;chkAutoPatch.Enabled=false;chkAutoPlay.Enabled=false;
+                isLoading=false;
+                StatusLibrary.Log("The server patch address has not been configured yet. Reopen the patcher after the server team adds it.");
+                cts.Cancel();return;
+            }
             string webUrl;
             string response;
             if (isDirectYaml)
@@ -233,30 +224,6 @@ namespace EQEmu_Patcher
                         MessageBox.Show("Failed to fetch filelist from " + webUrl + ": " + response);
                         this.Close();
                         return;
-                    }
-                }
-            }
-
-            string url = $"{patcherUrl}{fileName}-hash.txt";
-            try
-            {
-                var data = await Download(cts, url);
-                response = System.Text.Encoding.Default.GetString(data).ToUpper();
-            } catch (Exception ex)
-            {
-                Console.WriteLine($"Failed to fetch patch from {url}: {ex.Message}");
-            }
-
-            if (response != "")
-            {
-                myHash = UtilityLibrary.GetMD5(Application.ExecutablePath);
-                if (response.Trim() != myHash)
-                {
-                    StatusLibrary.Log("A published patcher update is available. This review candidate does not replace itself automatically.");
-                    //StatusLibrary.Log($"{myHash} vs {response} selfpatch");
-                    if (!isPendingPatch)
-                    {
-                        btnCheck.BackColor = Color.Red;
                     }
                 }
             }

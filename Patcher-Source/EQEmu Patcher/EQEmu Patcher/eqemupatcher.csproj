@@ -44,11 +44,11 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>true</Prefer32Bit>
     <SERVER_NAME>Project-Zek</SERVER_NAME>
-    <FILELIST_URL>https://raw.githubusercontent.com/Project-Zek/eqemupatcher/refs/heads/master/takp/filelist_takp.yml</FILELIST_URL>
+    <FILELIST_URL></FILELIST_URL>
     <PATCHER_URL>https://github.com/Project-Zek/eqemupatcher/releases/latest/download/</PATCHER_URL>
     <FILE_NAME>Project-Zek-Patcher</FILE_NAME>
     <CLIENT_DISPLAY_NAME>TAKP</CLIENT_DISPLAY_NAME>
-    <VERSION>1.0.14.0</VERSION>
+    <VERSION>1.0.17.0</VERSION>
     <KNOWN_HASHES>bbf3b339c65dc494f5f9b6a5648ba098</KNOWN_HASHES>
     <KNOWN_HASH_VERSION>TAKP</KNOWN_HASH_VERSION>
   </PropertyGroup>
@@ -63,11 +63,11 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>true</Prefer32Bit>
     <SERVER_NAME>Project-Zek</SERVER_NAME>
-    <FILELIST_URL>https://raw.githubusercontent.com/Project-Zek/eqemupatcher/refs/heads/master/takp/filelist_takp.yml</FILELIST_URL>
+    <FILELIST_URL></FILELIST_URL>
     <PATCHER_URL>https://github.com/Project-Zek/eqemupatcher/releases/latest/download/</PATCHER_URL>
     <FILE_NAME>Project-Zek-Patcher</FILE_NAME>
     <CLIENT_DISPLAY_NAME>TAKP</CLIENT_DISPLAY_NAME>
-    <VERSION>1.0.14.0</VERSION>
+    <VERSION>1.0.17.0</VERSION>
     <KNOWN_HASHES>B86646F1A48990A9355644B6E146E70C</KNOWN_HASHES>
     <KNOWN_HASH_VERSION>TAKP</KNOWN_HASH_VERSION>
   </PropertyGroup>
@@ -87,6 +87,7 @@
       <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.IO.Compression" />
@@ -115,6 +116,10 @@
     <Compile Include="ClassicFix\ClassicFixForm.cs" />
     <Compile Include="ClassicFix\MusicDefinitionAssets.cs" />
     <EmbeddedResource Include="ClassicFix\classic-recipes.json"><LogicalName>ProjectZek.ClassicRecipes</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="LaunchAssets\d3d11.conf"><LogicalName>ProjectZek.Graphics.d3d11</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="LaunchAssets\d3d12.conf"><LogicalName>ProjectZek.Graphics.d3d12</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="LaunchAssets\d3d12-quality.conf"><LogicalName>ProjectZek.Graphics.d3d12-quality</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="LaunchAssets\LicenseNotices.txt"><LogicalName>ProjectZek.LicenseNotices</LogicalName></EmbeddedResource>
     <EmbeddedResource Include="ClassicFix\ClassicFix-Defender.ps1"><LogicalName>ProjectZek.DefenderHelper</LogicalName></EmbeddedResource>
     <Compile Include="PatchTransaction.cs" />
     <Compile Include="PatcherLaunchOptions.cs" />

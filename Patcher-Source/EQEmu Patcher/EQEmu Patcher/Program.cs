@@ -26,6 +26,9 @@ namespace EQEmu_Patcher
         [STAThread]
         static void Main(string[] args)
         {
+            if(args.Length==1&&args[0]=="--licenses") {
+                Application.EnableVisualStyles();MainForm.ShowLicenseNotices();return;
+            }
             try {MainForm.OfflineReview=SelectReviewMode(args);}
             catch(ArgumentException error) {MessageBox.Show(error.Message,"Project Zek");return;}
             // Ensure modern TLS for HTTPS endpoints (GitHub raw/releases)
