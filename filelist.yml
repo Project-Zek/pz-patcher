@@ -1,4 +1,4 @@
-version: "PZ-20261011-Patcher-1.0.17"
+version: "PZ-20261011-Client-1.0.17-PZ-UI-Optional"
 downloadprefix: https://raw.githubusercontent.com/Project-Zek/pz-patcher/main/client/1.0.17/
 downloads:
 - name: "D3D8.dll"
@@ -21,6 +21,1246 @@ downloads:
   md5: 39b5918b0c983ddd3750b2128e6c1225
   date: "20261011"
   size: 1939466
+- name: "uifiles/pz_ui/arrow.cur"
+  md5: d2ae6535fa644254b04e8dcdd29568a4
+  date: "20261011"
+  size: 3262
+- name: "uifiles/pz_ui/AttackIndicator.png"
+  md5: ee9f93f86de1e0e161fbc040670e0738
+  date: "20261011"
+  size: 2592
+- name: "uifiles/pz_ui/AttackIndicator.tga"
+  md5: 360f9818f84e821c2a5ba2813931ff24
+  date: "20261011"
+  size: 196652
+- name: "uifiles/pz_ui/background_dark.tga"
+  md5: d3cc94c607b613caf962ebf099492d1c
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/background_light.tga"
+  md5: 6c282e369e26d87bc27fdd65ced45160
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/bard01.tga"
+  md5: 03b9addd3890e6a0d4d76a10ecc90420
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/beastlord01.tga"
+  md5: 202a236bc78919975dee1b6b97aae55e
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Berserker01.tga"
+  md5: daf42bb063c7b411350bd0982abe0c91
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Berserker02.tga"
+  md5: fb6f28d9fe7db629b41c01b3feff09b4
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/books.txt"
+  md5: 0d6f154954fab0fcfe38417c7475872f
+  date: "20261011"
+  size: 1388
+- name: "uifiles/pz_ui/Buff_Background.tga"
+  md5: 3f535df36ffa04cdb47ce19443c99849
+  date: "20261011"
+  size: 32786
+- name: "uifiles/pz_ui/classic_bars.png"
+  md5: a36d1ac6caf5b75ac7e3d210b1b6415f
+  date: "20261011"
+  size: 16770
+- name: "uifiles/pz_ui/Classic_Icons"
+  md5: 9cc7fce314e11076944c7fb10fe3b882
+  date: "20261011"
+  size: 218734
+- name: "uifiles/pz_ui/classic_pieces01.tga"
+  md5: 8dadc20cc3cbf250693e5cc64f2fa102
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/cleric01.tga"
+  md5: b876a580eaddec73a8372e24dd87e4ea
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/cleric02.tga"
+  md5: 2c993092b06d153c860df146f4c88b9c
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/CS_Buttons.bmp"
+  md5: d8f9375f7d32be60c42839ad8eb35008
+  date: "20261011"
+  size: 196664
+- name: "uifiles/pz_ui/Custom_Cursor.tga"
+  md5: 43c3c70a2a86e9d322cc72d7fa2519a6
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Custom_Cursor_Drag.tga"
+  md5: 84d8907e10784dca1ebab2968852d4c1
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Custom_Cursor_Resize_EW.tga"
+  md5: 865725287c51065e846793a29dc827eb
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Custom_Cursor_Resize_NESW.tga"
+  md5: ebae4d4f180e142caf3d355dd94841df
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Custom_Cursor_Resize_NS.tga"
+  md5: 869d24f17b1060be4e9bdd5db0ba5deb
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Custom_Cursor_Resize_NWSE.tga"
+  md5: f99f1ad57c3f2b77693473672aecf1b0
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/default_spellbook01.tga"
+  md5: a007075389cbadb2718e791ab675a511
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/default_spellbook02.tga"
+  md5: effe43819af22478a6cda6a85623d995
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/default_spellbook03.tga"
+  md5: 252cbee2027cea5db413523af4c9907c
+  date: "20261011"
+  size: 131090
+- name: "uifiles/pz_ui/default_spellbook04.tga"
+  md5: fed3f593413cafdb2d5ea7ca5d56131e
+  date: "20261011"
+  size: 131090
+- name: "uifiles/pz_ui/default_spellbook05.tga"
+  md5: efb5390e9521ee178c149566db48ded9
+  date: "20261011"
+  size: 32786
+- name: "uifiles/pz_ui/default_spellbook06.tga"
+  md5: ec7287a0337f07d79190a0b7b2c6196b
+  date: "20261011"
+  size: 40018
+- name: "uifiles/pz_ui/dragitem1.tga"
+  md5: 475b64f9c6ba7b41f74bf2b5db79c1b6
+  date: "20261011"
+  size: 112026
+- name: "uifiles/pz_ui/dragitem10.tga"
+  md5: 39d9a4b016f76680d2d9b23446b04fab
+  date: "20261011"
+  size: 97084
+- name: "uifiles/pz_ui/dragitem11.tga"
+  md5: d565e9cedf4abf253be76defe7abf208
+  date: "20261011"
+  size: 88089
+- name: "uifiles/pz_ui/dragitem12.tga"
+  md5: a90123d914241134e583928f33d2c3d4
+  date: "20261011"
+  size: 105704
+- name: "uifiles/pz_ui/dragitem13.tga"
+  md5: a1d3ba6028e5d1f7b44392be3583ba43
+  date: "20261011"
+  size: 110149
+- name: "uifiles/pz_ui/dragitem14.tga"
+  md5: 9c059bfad4130810d8dc61ca6e397dbe
+  date: "20261011"
+  size: 99352
+- name: "uifiles/pz_ui/dragitem15.tga"
+  md5: a7b1c27eb48e41f79772a4feae2f09f4
+  date: "20261011"
+  size: 70433
+- name: "uifiles/pz_ui/dragitem16.tga"
+  md5: f2e4aeb43f37f233a782eeaaf174010e
+  date: "20261011"
+  size: 81544
+- name: "uifiles/pz_ui/dragitem17.tga"
+  md5: fc75eaa1698d711a7a8c52721a3239be
+  date: "20261011"
+  size: 63758
+- name: "uifiles/pz_ui/dragitem18.tga"
+  md5: e9de38feb00326ec67093ccb503d94bc
+  date: "20261011"
+  size: 73494
+- name: "uifiles/pz_ui/dragitem19.tga"
+  md5: 60f5e77ba85cfbe444359319fd7c33e9
+  date: "20261011"
+  size: 56904
+- name: "uifiles/pz_ui/dragitem2.tga"
+  md5: e11193199e82ebfeb8ccb1a4162ec004
+  date: "20261011"
+  size: 106238
+- name: "uifiles/pz_ui/dragitem20.tga"
+  md5: 8137d80dbc72356c773ccd80599d4fd4
+  date: "20261011"
+  size: 75369
+- name: "uifiles/pz_ui/dragitem21.tga"
+  md5: 888e711cfcb051c0b81a14af1bc1d6fc
+  date: "20261011"
+  size: 94321
+- name: "uifiles/pz_ui/dragitem22.tga"
+  md5: cc72bffc789f667012cd3939df3fd620
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/dragitem23.tga"
+  md5: 8c2bf5558dfece45b6d8ad43dbfe7f43
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/dragitem24.tga"
+  md5: 5d6d4026adad68e9e813bef4e7558e71
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/dragitem25.tga"
+  md5: 6b7345f522263e7fcd8338b7eeebce9d
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/dragitem3.tga"
+  md5: 704ea5f8a8dcd6957a7ee3e4762e05c8
+  date: "20261011"
+  size: 70836
+- name: "uifiles/pz_ui/dragitem4.tga"
+  md5: b6e63df8409cfb50f3de2f99d296d2de
+  date: "20261011"
+  size: 119736
+- name: "uifiles/pz_ui/dragitem5.tga"
+  md5: ccab51583b3a125a017160d884142cc8
+  date: "20261011"
+  size: 126516
+- name: "uifiles/pz_ui/dragitem6.tga"
+  md5: 5a6abbf836eb1c7a1a2da09c4e3ab0b6
+  date: "20261011"
+  size: 115466
+- name: "uifiles/pz_ui/dragitem7.tga"
+  md5: 72821305dcc261fe6b7c75dead16c93d
+  date: "20261011"
+  size: 97865
+- name: "uifiles/pz_ui/dragitem8.tga"
+  md5: 6d106380d0ba597caa04d5acc3a56ad0
+  date: "20261011"
+  size: 91876
+- name: "uifiles/pz_ui/dragitem9.tga"
+  md5: 00ac825ace259e635887e7182d0734a4
+  date: "20261011"
+  size: 88061
+- name: "uifiles/pz_ui/druid01.tga"
+  md5: d0db6d59d4f25a54a258145363c401b2
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/druid02.tga"
+  md5: 5733ccd2ed7c9990d9303c8bc5d737c7
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/enchanter01.tga"
+  md5: 8f6cc8e1f6a26d7364ee80c9ce057934
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/enchanter01_1.tga"
+  md5: 8f6cc8e1f6a26d7364ee80c9ce057934
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/EQUI_AAWindow.xml"
+  md5: 8727fb8d66170f7733731dd65b81ed52
+  date: "20261011"
+  size: 17187
+- name: "uifiles/pz_ui/EQUI_ActionsWindow.xml"
+  md5: 0e5371afa136e042bbbdf3f948dbb2eb
+  date: "20261011"
+  size: 43569
+- name: "uifiles/pz_ui/EQUI_AdvancedDisplayOptionsWnd.xml"
+  md5: d3bda3bcbf580eb8dfb185ed98030251
+  date: "20261011"
+  size: 44955
+- name: "uifiles/pz_ui/EQUI_AlarmWnd.xml"
+  md5: 7e3346b3ede69a4fe5a0075864b72695
+  date: "20261011"
+  size: 6434
+- name: "uifiles/pz_ui/EQUI_Animations.xml"
+  md5: b751319f296394ec02bfe3b39a91ff8f
+  date: "20261011"
+  size: 235326
+- name: "uifiles/pz_ui/EQUI_BankWnd.xml"
+  md5: f3a11dc214bb1c10cbedbd1ad8c7635c
+  date: "20261011"
+  size: 10026
+- name: "uifiles/pz_ui/EQUI_BarterSearchWnd.xml"
+  md5: 47a20c2f227fdb2e41ba083e30e29517
+  date: "20261011"
+  size: 18306
+- name: "uifiles/pz_ui/EQUI_BarterWnd.xml"
+  md5: 40600bd3294abb8244361325988ff6fd
+  date: "20261011"
+  size: 35738
+- name: "uifiles/pz_ui/EQUI_BazaarSearchWnd.xml"
+  md5: 959c1e116dac348b3f4722485e425aec
+  date: "20261011"
+  size: 23171
+- name: "uifiles/pz_ui/EQUI_BazaarWnd.xml"
+  md5: c5890dc4a18dcae7da9d2efc965fa4f1
+  date: "20261011"
+  size: 54104
+- name: "uifiles/pz_ui/EQUI_BookWindow.xml"
+  md5: 4d5da4b3117bd76d746c79cccbd01cea
+  date: "20261011"
+  size: 7245
+- name: "uifiles/pz_ui/EQUI_BreathWindow.xml"
+  md5: 2ab7a48c2de483242ded6a4ac1560f34
+  date: "20261011"
+  size: 1950
+- name: "uifiles/pz_ui/EQUI_BuffWindow.xml"
+  md5: 6857532a3641d8cb140c7d911b880d3b
+  date: "20261011"
+  size: 25151
+- name: "uifiles/pz_ui/EQUI_BugReportWnd.xml"
+  md5: cded432f02bad7f401dd7404d88b10ed
+  date: "20261011"
+  size: 22242
+- name: "uifiles/pz_ui/EQUI_CastingWindow.xml"
+  md5: a7f914b0e3ba0bff5ef18f291f324cff
+  date: "20261011"
+  size: 3101
+- name: "uifiles/pz_ui/EQUI_CastSpellWnd.xml"
+  md5: 0f939f59d3443b5146b322f36c8976ad
+  date: "20261011"
+  size: 10629
+- name: "uifiles/pz_ui/EQUI_CharacterSelect.xml"
+  md5: 461b8eaba9c2aa99f07e4d9c7814dfb8
+  date: "20261011"
+  size: 17836
+- name: "uifiles/pz_ui/EQUI_ChatWindow.xml"
+  md5: 37916d3ee8dc8f3b6a960bdfb62e3a63
+  date: "20261011"
+  size: 2068
+- name: "uifiles/pz_ui/EQUI_ChooseZoneWnd.xml"
+  md5: 8bb269af94f5318faac3d20f641b98da
+  date: "20261011"
+  size: 4330
+- name: "uifiles/pz_ui/EQUI_CompassWnd.xml"
+  md5: 13daadf494d9a3b9ebbc813452832556
+  date: "20261011"
+  size: 1932
+- name: "uifiles/pz_ui/EQUI_ConfirmationDialog.xml"
+  md5: 28b5ac8c5cef1f8f0a544a9174555eb5
+  date: "20261011"
+  size: 5060
+- name: "uifiles/pz_ui/EQUI_Container.xml"
+  md5: 5457d76732c2fb4b7fb6071b67614310
+  date: "20261011"
+  size: 14203
+- name: "uifiles/pz_ui/EQUI_CursorAttachment.xml"
+  md5: a689f5033a1f5a3ae89dd08be4440319
+  date: "20261011"
+  size: 1982
+- name: "uifiles/pz_ui/EQUI_EditLabelWnd.xml"
+  md5: cc616adb07ab00b5341c9373b2288f0a
+  date: "20261011"
+  size: 6976
+- name: "uifiles/pz_ui/EQUI_FacePick.xml"
+  md5: 891173db57801cf76a4e2c57f889205d
+  date: "20261011"
+  size: 19672
+- name: "uifiles/pz_ui/EQUI_FeedbackWnd.xml"
+  md5: 82a8442ab6943f2977b517bed55c9b0c
+  date: "20261011"
+  size: 814139
+- name: "uifiles/pz_ui/EQUI_FriendsWnd.xml"
+  md5: fc3f0f5b5d2c3bc3e2588347e11be158
+  date: "20261011"
+  size: 281424
+- name: "uifiles/pz_ui/EQUI_GemsGameWnd.xml"
+  md5: f53abec1711f3c71138ed46f2ec48152
+  date: "20261011"
+  size: 29020
+- name: "uifiles/pz_ui/EQUI_GiveWnd.xml"
+  md5: 1fae858687607ca5045e4e48706f3eb0
+  date: "20261011"
+  size: 8593
+- name: "uifiles/pz_ui/EQUI_GroupWindow.xml"
+  md5: 536a7b1397fc0a8fdde1f7bfa4e8ff43
+  date: "20261011"
+  size: 24826
+- name: "uifiles/pz_ui/EQUI_GuildManagementWnd.xml"
+  md5: 5fc98fee506eee46876ed54517a04291
+  date: "20261011"
+  size: 29601
+- name: "uifiles/pz_ui/EQUI_HelpWnd.xml"
+  md5: f9a88e0850c38e47b72a5b583a37d060
+  date: "20261011"
+  size: 3779
+- name: "uifiles/pz_ui/EQUI_HotButtonWnd.xml"
+  md5: a15f88afa3b5e3ead58620a77c7f963f
+  date: "20261011"
+  size: 84508
+- name: "uifiles/pz_ui/EQUI_InspectWnd.xml"
+  md5: 9682c7fb148e370d007f4413e28a29a8
+  date: "20261011"
+  size: 14560
+- name: "uifiles/pz_ui/EQUI_Inventory.xml"
+  md5: f08073eae1e9fa89986209e8f63d9506
+  date: "20261011"
+  size: 51546
+- name: "uifiles/pz_ui/EQUI_ItemDisplay.xml"
+  md5: f04eb61532d354be52e7b856e906943c
+  date: "20261011"
+  size: 2815
+- name: "uifiles/pz_ui/EQUI_LargeDialogWnd.xml"
+  md5: 54142fda1dc81f111f26fdff2e2e914f
+  date: "20261011"
+  size: 9027
+- name: "uifiles/pz_ui/EQUI_LoadskinWnd.xml"
+  md5: c9b9754b960f85a9228a003852cdc372
+  date: "20261011"
+  size: 3523
+- name: "uifiles/pz_ui/EQUI_LootWnd.xml"
+  md5: c989515d4279994bfe34bdbe6f895182
+  date: "20261011"
+  size: 18604
+- name: "uifiles/pz_ui/EQUI_MeleeBuffWindow.xml"
+  md5: fc3858cf81071c266f24d07fd9a5d1c6
+  date: "20261011"
+  size: 1673
+- name: "uifiles/pz_ui/EQUI_MerchantWnd.xml"
+  md5: 9aa8c63cfce1811e1ef57646107338a9
+  date: "20261011"
+  size: 42433
+- name: "uifiles/pz_ui/EQUI_NoteWindow.xml"
+  md5: f1636077357fa4defee919a799537843
+  date: "20261011"
+  size: 4005
+- name: "uifiles/pz_ui/EQUI_OptionsWindow.xml"
+  md5: c2e122b9061d4775c45676397389a3e5
+  date: "20261011"
+  size: 140991
+- name: "uifiles/pz_ui/EQUI_PetInfoWindow.xml"
+  md5: ee6824e51cc2a99c09c5ada812326f51
+  date: "20261011"
+  size: 10089
+- name: "uifiles/pz_ui/EQUI_PlayerNotesWindow.xml"
+  md5: eddfd8b0ec67a6619604c4341bd76596
+  date: "20261011"
+  size: 1691
+- name: "uifiles/pz_ui/EQUI_PlayerWindow.xml"
+  md5: 35f2bbfe29371be30ba1977c86c980f7
+  date: "20261011"
+  size: 25049
+- name: "uifiles/pz_ui/EQUI_PvPLeaderBoardWnd.xml"
+  md5: 2ad0599fa7887045cd435b564fcdfb1f
+  date: "20261011"
+  size: 15792
+- name: "uifiles/pz_ui/EQUI_PvPStatsWnd.xml"
+  md5: 5b5b32e998ef1357a4350975e3a066db
+  date: "20261011"
+  size: 16588
+- name: "uifiles/pz_ui/EQUI_QuantityWnd.xml"
+  md5: 7c465ceec5edbdab59db0c8b67926e3b
+  date: "20261011"
+  size: 2512
+- name: "uifiles/pz_ui/EQUI_RaidOptionsWindow.xml"
+  md5: f00bb15a3ceed931446b2b7d45b70ca1
+  date: "20261011"
+  size: 19049
+- name: "uifiles/pz_ui/EQUI_RaidWindow.xml"
+  md5: e5bbe18febb91f74637242571cdf42ff
+  date: "20261011"
+  size: 17621
+- name: "uifiles/pz_ui/EQUI_SelectorWnd.xml"
+  md5: d320215563403834417bb364c0cbe3cf
+  date: "20261011"
+  size: 7573
+- name: "uifiles/pz_ui/EQUI_SkillsSelectWindow.xml"
+  md5: ed565f017761601b2921c848a3e16201
+  date: "20261011"
+  size: 1715
+- name: "uifiles/pz_ui/EQUI_SkillsWindow.xml"
+  md5: 6a595516976d4acea77dcfc59f291f07
+  date: "20261011"
+  size: 4180
+- name: "uifiles/pz_ui/EQUI_SocialEditWnd.xml"
+  md5: 66c40b58fcb67dbfe55e8a67579133c2
+  date: "20261011"
+  size: 24735
+- name: "uifiles/pz_ui/EQUI_SpellBookWnd.xml"
+  md5: 2cb6bd4249d9a4e24bae8a1e4f21cc47
+  date: "20261011"
+  size: 33838
+- name: "uifiles/pz_ui/EQUI_TargetWindow.xml"
+  md5: 5aa22f0d56ac4f8dfa8a4ebf7072408e
+  date: "20261011"
+  size: 4399
+- name: "uifiles/pz_ui/EQUI_Templates.xml"
+  md5: 3e4c6c3cb5b81fe7099f2ebcb256fba6
+  date: "20261011"
+  size: 26260
+- name: "uifiles/pz_ui/EQUI_TextEntryWnd.xml"
+  md5: b7016e64f3c50bfa3d598cf3c7a1823d
+  date: "20261011"
+  size: 3490
+- name: "uifiles/pz_ui/EQUI_TextMessageWindow.xml"
+  md5: 325c25de8648aced247deac03aeedff8
+  date: "20261011"
+  size: 1352
+- name: "uifiles/pz_ui/EQUI_TrackingWnd.xml"
+  md5: da395c2710707be082bdab2106abef27
+  date: "20261011"
+  size: 12627
+- name: "uifiles/pz_ui/EQUI_TradeskillWnd.xml"
+  md5: a4fb48deea12fe5e2f31e82391b333f7
+  date: "20261011"
+  size: 24547
+- name: "uifiles/pz_ui/EQUI_TradeWnd.xml"
+  md5: 95af77fa003ff99ecf05694639849db5
+  date: "20261011"
+  size: 19599
+- name: "uifiles/pz_ui/EQUI_TrainWindow.xml"
+  md5: 2d6e7b3d93d9c8597748837fdc081754
+  date: "20261011"
+  size: 10734
+- name: "uifiles/pz_ui/EQUI_VideoModesWnd.xml"
+  md5: cac6b74aa96bc01f26f0500f8a94d171
+  date: "20261011"
+  size: 4625
+- name: "uifiles/pz_ui/EQUI_ZealPVP.xml"
+  md5: cc4df12541cbb7129da9fe2df78c698b
+  date: "20261011"
+  size: 6810
+- name: "uifiles/pz_ui/ew.cur"
+  md5: 8cbab711238db256f65808ea1a80e7a8
+  date: "20261011"
+  size: 3262
+- name: "uifiles/pz_ui/Extras/Buff_Window QQQuarm See-through (standard)/EQUI_BuffWindow.xml"
+  md5: e34ec3c86c6f650a5597a910a8ca4a44
+  date: "20261011"
+  size: 25149
+- name: "uifiles/pz_ui/Extras/Buff_Window qqui/EQUI_BuffWindow.xml"
+  md5: 5bc76594a8a5ee0140342a792a9cb304
+  date: "20261011"
+  size: 40732
+- name: "uifiles/pz_ui/Extras/Buff_Window Qrustle/EQUI_BuffWindow.xml"
+  md5: c6c54917d91330d48dcdae2716d1df11
+  date: "20261011"
+  size: 26851
+- name: "uifiles/pz_ui/Extras/Buff_Window WizMod/EQUI_BuffWindow.xml"
+  md5: cfa5fdc4af2051b79e4c7b34641438d5
+  date: "20261011"
+  size: 14851
+- name: "uifiles/pz_ui/Extras/Casting_Window With Spell_Name (standard)/EQUI_CastingWindow.xml"
+  md5: 9b1de638f0d90956da3a053ec2b903fd
+  date: "20261011"
+  size: 3095
+- name: "uifiles/pz_ui/Extras/Casting_Window With Spell_Name Below/EQUI_CastingWindow.xml"
+  md5: 8826ee28e4a25a0ee54b27411176e4bc
+  date: "20261011"
+  size: 3233
+- name: "uifiles/pz_ui/Extras/ChatWindow With Titlebar/EQUI_ChatWindow.xml"
+  md5: a917eb474fd2e1a5e91d1cf98b34d7de
+  date: "20261011"
+  size: 2067
+- name: "uifiles/pz_ui/Extras/ChatWindow Without Titlebar (standard)/EQUI_ChatWindow.xml"
+  md5: 37916d3ee8dc8f3b6a960bdfb62e3a63
+  date: "20261011"
+  size: 2068
+- name: "uifiles/pz_ui/Extras/Container qqui (standard)/EQUI_Container.xml"
+  md5: ddd1e79a35922371e11cc3cc118ddb0f
+  date: "20261011"
+  size: 14199
+- name: "uifiles/pz_ui/Extras/Cursor_Green (standard)/1x Dimensions.txt"
+  md5: 23ed55578a4cd295684bee26d37de8d7
+  date: "20261011"
+  size: 677
+- name: "uifiles/pz_ui/Extras/Cursor_Green (standard)/1x/Custom_Cursor.tga"
+  md5: 43c3c70a2a86e9d322cc72d7fa2519a6
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Green (standard)/1x/Custom_Cursor_Drag.tga"
+  md5: 84d8907e10784dca1ebab2968852d4c1
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Green (standard)/1x/Custom_Cursor_Resize_EW.tga"
+  md5: 865725287c51065e846793a29dc827eb
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Green (standard)/1x/Custom_Cursor_Resize_NESW.tga"
+  md5: ebae4d4f180e142caf3d355dd94841df
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Green (standard)/1x/Custom_Cursor_Resize_NS.tga"
+  md5: 869d24f17b1060be4e9bdd5db0ba5deb
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Green (standard)/1x/Custom_Cursor_Resize_NWSE.tga"
+  md5: f99f1ad57c3f2b77693473672aecf1b0
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Green (standard)/1x/EQUI_Animations.xml"
+  md5: 625d16af8dcca1a930eb1b056cabbee2
+  date: "20261011"
+  size: 233725
+- name: "uifiles/pz_ui/Extras/Cursor_Green (standard)/2x Dimensions.txt"
+  md5: 2f8059c464a1a9e9d705bf723abfeb34
+  date: "20261011"
+  size: 678
+- name: "uifiles/pz_ui/Extras/Cursor_Green (standard)/ReadMe.txt"
+  md5: aa4098592adac3ac6f3870fdce588cbe
+  date: "20261011"
+  size: 3939
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x Dimensions.txt"
+  md5: 23ed55578a4cd295684bee26d37de8d7
+  date: "20261011"
+  size: 677
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/Normal Red_Cursor/Custom_Cursor.tga"
+  md5: 1335562e20c9817f80e439ba8f7c9881
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/Normal Red_Cursor/Custom_Cursor_Drag.tga"
+  md5: 84d8907e10784dca1ebab2968852d4c1
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/Normal Red_Cursor/Custom_Cursor_Resize_EW.tga"
+  md5: 865725287c51065e846793a29dc827eb
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/Normal Red_Cursor/Custom_Cursor_Resize_NESW.tga"
+  md5: ebae4d4f180e142caf3d355dd94841df
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/Normal Red_Cursor/Custom_Cursor_Resize_NS.tga"
+  md5: 869d24f17b1060be4e9bdd5db0ba5deb
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/Normal Red_Cursor/Custom_Cursor_Resize_NWSE.tga"
+  md5: f99f1ad57c3f2b77693473672aecf1b0
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/Normal Red_Cursor/EQUI_Animations.xml"
+  md5: 625d16af8dcca1a930eb1b056cabbee2
+  date: "20261011"
+  size: 233725
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/White_Edge/Custom_Cursor.tga"
+  md5: 08b19b5720765376e3115ef8322dcc2c
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/White_Edge/Custom_Cursor_Drag.tga"
+  md5: 84d8907e10784dca1ebab2968852d4c1
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/White_Edge/Custom_Cursor_Resize_EW.tga"
+  md5: 865725287c51065e846793a29dc827eb
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/White_Edge/Custom_Cursor_Resize_NESW.tga"
+  md5: ebae4d4f180e142caf3d355dd94841df
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/White_Edge/Custom_Cursor_Resize_NS.tga"
+  md5: 869d24f17b1060be4e9bdd5db0ba5deb
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/White_Edge/Custom_Cursor_Resize_NWSE.tga"
+  md5: f99f1ad57c3f2b77693473672aecf1b0
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/1x/White_Edge/EQUI_Animations.xml"
+  md5: 625d16af8dcca1a930eb1b056cabbee2
+  date: "20261011"
+  size: 233725
+- name: "uifiles/pz_ui/Extras/Cursor_Red/2x Dimensions.txt"
+  md5: 2f8059c464a1a9e9d705bf723abfeb34
+  date: "20261011"
+  size: 678
+- name: "uifiles/pz_ui/Extras/Cursor_Red/2x/Normal Red_Cursor/Custom_Cursor.tga"
+  md5: 673e7bb4e1269a8388cb28952a73bd4a
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/2x/Normal Red_Cursor/Custom_Cursor_Drag.tga"
+  md5: 523d3cd0d9ffae0875ee630a968138aa
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/2x/Normal Red_Cursor/Custom_Cursor_Resize_EW.tga"
+  md5: 02172418ad8892789d45bd0153295fee
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/2x/Normal Red_Cursor/Custom_Cursor_Resize_NESW.tga"
+  md5: 460c87867fb3fdf2a055aefd6cce4db7
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/2x/Normal Red_Cursor/Custom_Cursor_Resize_NS.tga"
+  md5: 0e995f05b596a8e39db9b623c77a2159
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/2x/Normal Red_Cursor/Custom_Cursor_Resize_NWSE.tga"
+  md5: 88e8e8333964e5d81dad25421626d41a
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Cursor_Red/2x/Normal Red_Cursor/EQUI_Animations.xml"
+  md5: bbd2606532cd9f716128baba04e06bc6
+  date: "20261011"
+  size: 233726
+- name: "uifiles/pz_ui/Extras/Cursor_Red/ReadMe.txt"
+  md5: aa4098592adac3ac6f3870fdce588cbe
+  date: "20261011"
+  size: 3939
+- name: "uifiles/pz_ui/Extras/ExpPerHourBar OFF (standard)/EQUI_PlayerWindow.xml"
+  md5: 70bb89d14a35067a0eff3e21bb033f46
+  date: "20261011"
+  size: 22951
+- name: "uifiles/pz_ui/Extras/ExpPerHourBar/EQUI_PlayerWindow.xml"
+  md5: 45ecad9b7f3220b09e0c03d5ee50f809
+  date: "20261011"
+  size: 21651
+- name: "uifiles/pz_ui/Extras/Friends Window Standard/EQUI_FriendsWnd.xml"
+  md5: 1faf6220007b42d90d4cc7e43f930808
+  date: "20261011"
+  size: 8151
+- name: "uifiles/pz_ui/Extras/Friends Window Tradeskills (standard)/EQUI_FriendsWnd.xml"
+  md5: fc3f0f5b5d2c3bc3e2588347e11be158
+  date: "20261011"
+  size: 281424
+- name: "uifiles/pz_ui/Extras/Group_Window Narrow Bars/EQUI_GroupWindow.xml"
+  md5: baaaa1bd243744a3b50a2a8d6caa3368
+  date: "20261011"
+  size: 24764
+- name: "uifiles/pz_ui/Extras/Group_Window Wide Bars (standard)/EQUI_GroupWindow.xml"
+  md5: 536a7b1397fc0a8fdde1f7bfa4e8ff43
+  date: "20261011"
+  size: 24826
+- name: "uifiles/pz_ui/Extras/Group_Window WideBars_Click_Targeting Vertical_Buttons/EQUI_GroupWindow.xml"
+  md5: 40af06443c9dec496e4e9a8d9ed36a5c
+  date: "20261011"
+  size: 27449
+- name: "uifiles/pz_ui/Extras/Group_Window WideBars_Click_Targeting/EQUI_GroupWindow.xml"
+  md5: 885cae13b00de18998872cae5767e3d7
+  date: "20261011"
+  size: 27427
+- name: "uifiles/pz_ui/Extras/Hotbar CalmetharED Clicky+3_Bag_Slots/EQUI_HotButtonWnd.xml"
+  md5: 493704fbade34830c06c83d6581d60fc
+  date: "20261011"
+  size: 84559
+- name: "uifiles/pz_ui/Extras/Hotbar CalmetharED Four Bags/EQUI_HotButtonWnd.xml"
+  md5: cf146d48fb4be73111a335e1c03fd0ea
+  date: "20261011"
+  size: 84397
+- name: "uifiles/pz_ui/Extras/Hotbar Daciana Horizontal Bags/EQUI_HotButtonWnd.xml"
+  md5: 6ff3afad5f86df8f2692688c2a5c3f52
+  date: "20261011"
+  size: 25599
+- name: "uifiles/pz_ui/Extras/Hotbar Daciana Horizontal No Bags/EQUI_HotButtonWnd.xml"
+  md5: fbb87b52528de8dcb7cc5d5f88e8764f
+  date: "20261011"
+  size: 19941
+- name: "uifiles/pz_ui/Extras/Hotbar FrankenUI/EQUI_HotButtonWnd.xml"
+  md5: 2a4e9e132e286ba919eef7fb7c7274a9
+  date: "20261011"
+  size: 33033
+- name: "uifiles/pz_ui/Extras/Hotbar QQ Horizontal No Bags No Numbers/EQUI_HotButtonWnd.xml"
+  md5: 4b6766c7c48d174be6795477d6fff3ba
+  date: "20261011"
+  size: 19880
+- name: "uifiles/pz_ui/Extras/Hotbar QQ Vertical NO Bags/EQUI_HotButtonWnd.xml"
+  md5: 0c7b5f246c069983984e8b5295a44d88
+  date: "20261011"
+  size: 26416
+- name: "uifiles/pz_ui/Extras/Hotbar qqui Vertical Bags (standard)/EQUI_HotButtonWnd.xml"
+  md5: a15f88afa3b5e3ead58620a77c7f963f
+  date: "20261011"
+  size: 84508
+- name: "uifiles/pz_ui/Extras/HP_Number Green/HP_Number Green - ExpPerHourBar/EQUI_PlayerWindow.xml"
+  md5: 875b6fed6f1a259d3713a73e86a0199f
+  date: "20261011"
+  size: 19547
+- name: "uifiles/pz_ui/Extras/HP_Number Green/HP_Number Green - No ExpPerHourBar/EQUI_PlayerWindow.xml"
+  md5: 712543ca12c466e4f9c5faf30eebb59d
+  date: "20261011"
+  size: 17618
+- name: "uifiles/pz_ui/Extras/HP_Number White (standard)/HP_Number White - ExpPerHourBar/EQUI_PlayerWindow.xml"
+  md5: 45ecad9b7f3220b09e0c03d5ee50f809
+  date: "20261011"
+  size: 21651
+- name: "uifiles/pz_ui/Extras/HP_Number White (standard)/HP_Number White - No ExpPerHourBar/EQUI_PlayerWindow.xml"
+  md5: 70bb89d14a35067a0eff3e21bb033f46
+  date: "20261011"
+  size: 22951
+- name: "uifiles/pz_ui/Extras/Pet Window Long/EQUI_PetInfoWindow.xml"
+  md5: 5607ca6c16342fcf0b4b147ba0a48e57
+  date: "20261011"
+  size: 10090
+- name: "uifiles/pz_ui/Extras/Pet Window Short With Name Below (standard)/EQUI_PetInfoWindow.xml"
+  md5: ee6824e51cc2a99c09c5ada812326f51
+  date: "20261011"
+  size: 10089
+- name: "uifiles/pz_ui/Extras/Pet Window Short/EQUI_PetInfoWindow.xml"
+  md5: 766741332bc39cad00a868a867ab19eb
+  date: "20261011"
+  size: 10070
+- name: "uifiles/pz_ui/Extras/Player Window qqui/EQUI_PlayerWindow.xml"
+  md5: 964c490775fac3559929a3ef5cf076fe
+  date: "20261011"
+  size: 13626
+- name: "uifiles/pz_ui/Extras/Player Window With Manabar (standard)/EQUI_PlayerWindow.xml"
+  md5: 35f2bbfe29371be30ba1977c86c980f7
+  date: "20261011"
+  size: 25049
+- name: "uifiles/pz_ui/Extras/Player Window Without Manabar/EQUI_PlayerWindow.xml"
+  md5: c929dfefd8155c9f04e9f42a76d06362
+  date: "20261011"
+  size: 18474
+- name: "uifiles/pz_ui/Extras/Spell Icons Classic/gemicons01.tga"
+  md5: 22c61ee5107754b8708ad813ebdae181
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons Classic/gemicons02.tga"
+  md5: c0108d30a6c0d86882fa5ff43b92cf4f
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons Classic/gemicons03.tga"
+  md5: a6eb8c90c830b9a5a777eded0679ea99
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons Classic/spells01.tga"
+  md5: 09707f27186d98bd56d5a46c4c775f93
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons Classic/spells02.tga"
+  md5: 48697b8b5d1b8c1b9a03c7a76abdc9fe
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons Classic/spells03.tga"
+  md5: b86043ab9e4cb7bb0852a2da2c11473e
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons Classic/spells04.tga"
+  md5: 00e7f918a0e39b2980cdd0f66d2fcc39
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons Classic/spells05.tga"
+  md5: c3b5560659f9b5885ba2e86588847fe5
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons Classic/spells06.tga"
+  md5: 52539b03246469e96857bea520e2ca8f
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons Classic/spells07.tga"
+  md5: c2a7f892c2c9320a6ecb85dc237932f8
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons Duxa/gemicons01.tga"
+  md5: 1256b336f0ed1824f5da43e13ef02bd2
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons Duxa/gemicons02.tga"
+  md5: 8295080f7869fb8f6bc7c869f4a2a078
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons Duxa/gemicons03.tga"
+  md5: a6eb8c90c830b9a5a777eded0679ea99
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons Duxa/spells01.tga"
+  md5: 6bb5e8f1279236e73a912b697eecad18
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons Duxa/spells02.tga"
+  md5: a9455f3ac3f97dcac2daf929feac4598
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons Duxa/spells03.tga"
+  md5: e853b951f4f656956300b71b84c0cf40
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons Duxa/spells04.tga"
+  md5: 7929cb9dd0b99ecc2286621d1205bcd8
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons Duxa/spells05.tga"
+  md5: e51f089f6bdce92129bad0710d4807f6
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons Duxa/spells06.tga"
+  md5: 52539b03246469e96857bea520e2ca8f
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons Duxa/spells07.tga"
+  md5: c2a7f892c2c9320a6ecb85dc237932f8
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons qqui (standard)/gemicons01.tga"
+  md5: 62a9ceeab2fe2a6260e3c8bd877312d4
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons qqui (standard)/gemicons02.tga"
+  md5: fc541a36ce7c5f89df2f2f864eda9b68
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons qqui (standard)/gemicons03.tga"
+  md5: 7a0af06988dd3a14420dadac853f1ccd
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons qqui (standard)/spells01.tga"
+  md5: 77620aec82c7b03ee1bcef9a8552d699
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons qqui (standard)/spells02.tga"
+  md5: c55f2eda3e9c737ba497086d670ca591
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons qqui (standard)/spells03.tga"
+  md5: c62cc174955def9a79cb0ce9a3d28d5d
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons qqui (standard)/spells04.tga"
+  md5: 31033586d490bb163f668be2a7df45fc
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons qqui (standard)/spells05.tga"
+  md5: 26948b45126f5879a79184b28da11e44
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/Extras/Spell Icons qqui (standard)/spells06.tga"
+  md5: 25dff4da4ee08e8033808aa207db47fa
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spell Icons qqui (standard)/spells07.tga"
+  md5: f5555796efd4853ca21cf0a216abdd3d
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spellbar Horizontal With Names/EQUI_CastSpellWnd.xml"
+  md5: a6f79d562e9666348aa5e25b20455de9
+  date: "20261011"
+  size: 9925
+- name: "uifiles/pz_ui/Extras/Spellbar Horizontal Without Names/EQUI_CastSpellWnd.xml"
+  md5: fd29e0aa81c5f6d1fc9caa7b6457601b
+  date: "20261011"
+  size: 5953
+- name: "uifiles/pz_ui/Extras/Spellbar With Names (standard)/EQUI_Animations.xml"
+  md5: 6cc498ab0f516d62cd6821effebf70c6
+  date: "20261011"
+  size: 228663
+- name: "uifiles/pz_ui/Extras/Spellbar With Names (standard)/EQUI_CastSpellWnd.xml"
+  md5: 0f939f59d3443b5146b322f36c8976ad
+  date: "20261011"
+  size: 10629
+- name: "uifiles/pz_ui/Extras/Spellbar With Names (standard)/EQUI_HotButtonWnd.xml"
+  md5: a15f88afa3b5e3ead58620a77c7f963f
+  date: "20261011"
+  size: 84508
+- name: "uifiles/pz_ui/Extras/Spellbar Without Names/EQUI_Animations.xml"
+  md5: 5eb84c4150eb0f404dc3c30350475a09
+  date: "20261011"
+  size: 228661
+- name: "uifiles/pz_ui/Extras/Spellbar Without Names/EQUI_CastSpellWnd.xml"
+  md5: 502da92f8a9705267ca84d29bb711935
+  date: "20261011"
+  size: 10614
+- name: "uifiles/pz_ui/Extras/Spellbar Without Names/EQUI_HotButtonWnd.xml"
+  md5: a15f88afa3b5e3ead58620a77c7f963f
+  date: "20261011"
+  size: 84508
+- name: "uifiles/pz_ui/Extras/Spellbook BrujolocoQQQuarm/EQUI_SpellBookWnd.xml"
+  md5: c56aed69078f6a6f98ffc55140ec6094
+  date: "20261011"
+  size: 43522
+- name: "uifiles/pz_ui/Extras/Spellbook BrujolocoQQQuarm/smallbook01.png"
+  md5: fc5923a5785b0c58537be0003c44d26b
+  date: "20261011"
+  size: 9135
+- name: "uifiles/pz_ui/Extras/Spellbook BrujolocoQQQuarm/smallbook02.png"
+  md5: 61fe073996a8243dfdc33e767187639b
+  date: "20261011"
+  size: 8863
+- name: "uifiles/pz_ui/Extras/Spellbook Duxa/default_spellbook01.tga"
+  md5: a007075389cbadb2718e791ab675a511
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spellbook Duxa/default_spellbook02.tga"
+  md5: effe43819af22478a6cda6a85623d995
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/Extras/Spellbook Duxa/default_spellbook03.tga"
+  md5: 252cbee2027cea5db413523af4c9907c
+  date: "20261011"
+  size: 131090
+- name: "uifiles/pz_ui/Extras/Spellbook Duxa/default_spellbook04.tga"
+  md5: fed3f593413cafdb2d5ea7ca5d56131e
+  date: "20261011"
+  size: 131090
+- name: "uifiles/pz_ui/Extras/Spellbook Duxa/default_spellbook05.tga"
+  md5: efb5390e9521ee178c149566db48ded9
+  date: "20261011"
+  size: 32786
+- name: "uifiles/pz_ui/Extras/Spellbook Duxa/default_spellbook06.tga"
+  md5: ec7287a0337f07d79190a0b7b2c6196b
+  date: "20261011"
+  size: 40018
+- name: "uifiles/pz_ui/Extras/Spellbook Duxa/EQUI_SpellBookWnd.xml"
+  md5: 534471baa284f649eca56d70410576d4
+  date: "20261011"
+  size: 34896
+- name: "uifiles/pz_ui/Extras/Spellbook qqui (standard)/EQUI_SpellBookWnd.xml"
+  md5: 2cb6bd4249d9a4e24bae8a1e4f21cc47
+  date: "20261011"
+  size: 33838
+- name: "uifiles/pz_ui/Extras/Spellbook qqui (standard)/spellbook01.tga"
+  md5: 70392501e5c5061fbb32f82c66e12071
+  date: "20261011"
+  size: 1048620
+- name: "uifiles/pz_ui/Extras/Spellbook qqui (standard)/spellbook02.tga"
+  md5: 171e8318e6a1521a68bf045992cccf94
+  date: "20261011"
+  size: 1048620
+- name: "uifiles/pz_ui/Extras/Spellbook qqui (standard)/spellbook03.tga"
+  md5: 733df2de14de982b52ddcd1f085b407c
+  date: "20261011"
+  size: 524332
+- name: "uifiles/pz_ui/Extras/Spellbook qqui (standard)/spellbook04.tga"
+  md5: 446aa59ed1be5a0ae61d6463423043a5
+  date: "20261011"
+  size: 524332
+- name: "uifiles/pz_ui/Extras/Target Window Calmethar (standard)/EQUI_TargetWindow.xml"
+  md5: 5aa22f0d56ac4f8dfa8a4ebf7072408e
+  date: "20261011"
+  size: 4399
+- name: "uifiles/pz_ui/Extras/Target Window qqui/EQUI_TargetWindow.xml"
+  md5: a3d757b30c783b5fd57c85ea7f09cbdb
+  date: "20261011"
+  size: 5695
+- name: "uifiles/pz_ui/gauges.tga"
+  md5: 458aa22e4b247695cd0ae8a78870cce7
+  date: "20261011"
+  size: 131116
+- name: "uifiles/pz_ui/gemicons01.tga"
+  md5: 22c61ee5107754b8708ad813ebdae181
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/gemicons02.tga"
+  md5: 9cc7fce314e11076944c7fb10fe3b882
+  date: "20261011"
+  size: 218734
+- name: "uifiles/pz_ui/gemicons03.tga"
+  md5: 5ff1b3c232b0f1164b5f870cb01e340d
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/ibeam.cur"
+  md5: 855f9a50d5f1406615400ad34bda4884
+  date: "20261011"
+  size: 3262
+- name: "uifiles/pz_ui/kunark.txt"
+  md5: 808e50211b30a5d721542ec71533f3b2
+  date: "20261011"
+  size: 2915
+- name: "uifiles/pz_ui/luclin.txt"
+  md5: bbbee3102cf5cc342310a7cbb6ae05a6
+  date: "20261011"
+  size: 1793
+- name: "uifiles/pz_ui/magician01.tga"
+  md5: 38081be76da498554da6a40f13c7e1a3
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/magician02.tga"
+  md5: 2e4140b0a3ad125aaa01dfa709e06d38
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/magician03.tga"
+  md5: f02a3fd97758631c8c5c1fc585481634
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/monk01.tga"
+  md5: aa4f5886edce7058f262e8f7b4a03918
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/monk02.tga"
+  md5: f7de48ce3d5d22563aad4e37511aaa9f
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/move.cur"
+  md5: b15813a832d2477d2c8791d90490671f
+  date: "20261011"
+  size: 3262
+- name: "uifiles/pz_ui/necromancer01.tga"
+  md5: a9c0f8acba7717b3765ccf1516ad4222
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/nesw.cur"
+  md5: 738ce7bed4e25f9ca77a5a0be2934afa
+  date: "20261011"
+  size: 3262
+- name: "uifiles/pz_ui/ns.cur"
+  md5: 14955308d8be46a52593c2b55836e9ef
+  date: "20261011"
+  size: 3262
+- name: "uifiles/pz_ui/nwse.cur"
+  md5: 6ccc41e4aca932b228738a51228cd28a
+  date: "20261011"
+  size: 3262
+- name: "uifiles/pz_ui/oldworld.txt"
+  md5: 78dfed4dc19fbdb90444dd4db978465c
+  date: "20261011"
+  size: 4928
+- name: "uifiles/pz_ui/paladin01.tga"
+  md5: 99ad215e223942ddd850c6dbad0deb5e
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/paladin02.tga"
+  md5: b4ff81bdf9b81cd0423535c4ca57b90e
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/pop.txt"
+  md5: ae009e06c0ac90cf406cf5a70f2bc1d9
+  date: "20261011"
+  size: 1116
+- name: "uifiles/pz_ui/pot_timer.tga"
+  md5: 96679c223792af1f7e326e5578a0e923
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/pz_icon.tga"
+  md5: a0803b2ba30527c1979693c326c538e1
+  date: "20261011"
+  size: 262163
+- name: "uifiles/pz_ui/ranger01.tga"
+  md5: 99c82b79a9e9eb4d23ce37d4dec0db15
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/ranger02.tga"
+  md5: fafbfdde759d92192739f3dce52c556e
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/rogue01.tga"
+  md5: 42339a3b01bb497a6bbb899164b5e04a
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/scrollbar_gutter.tga"
+  md5: 61faae689eb172a56347b37fe1abe237
+  date: "20261011"
+  size: 1125
+- name: "uifiles/pz_ui/shadowknight01.tga"
+  md5: 6a275eb2225dc6e192abee92ff2f280a
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/shadowknight02.tga"
+  md5: ddd0f80bb720680fe936450046f87d8e
+  date: "20261011"
+  size: 32786
+- name: "uifiles/pz_ui/shaman01.tga"
+  md5: 695d2f23eaead97edfa2c5e566997679
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/smallbook01.png"
+  md5: fc5923a5785b0c58537be0003c44d26b
+  date: "20261011"
+  size: 9135
+- name: "uifiles/pz_ui/smallbook02.png"
+  md5: 61fe073996a8243dfdc33e767187639b
+  date: "20261011"
+  size: 8863
+- name: "uifiles/pz_ui/spellbook01.tga"
+  md5: 70392501e5c5061fbb32f82c66e12071
+  date: "20261011"
+  size: 1048620
+- name: "uifiles/pz_ui/spellbook02.tga"
+  md5: 171e8318e6a1521a68bf045992cccf94
+  date: "20261011"
+  size: 1048620
+- name: "uifiles/pz_ui/spellbook03.tga"
+  md5: 733df2de14de982b52ddcd1f085b407c
+  date: "20261011"
+  size: 524332
+- name: "uifiles/pz_ui/spellbook04.tga"
+  md5: 446aa59ed1be5a0ae61d6463423043a5
+  date: "20261011"
+  size: 524332
+- name: "uifiles/pz_ui/spellgems.tga"
+  md5: e75455c4c7be4cd07b226fbd65f5e75d
+  date: "20261011"
+  size: 65580
+- name: "uifiles/pz_ui/spells01.tga"
+  md5: 09707f27186d98bd56d5a46c4c775f93
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/spells02.tga"
+  md5: 48697b8b5d1b8c1b9a03c7a76abdc9fe
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/spells03.tga"
+  md5: b86043ab9e4cb7bb0852a2da2c11473e
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/spells04.tga"
+  md5: 00e7f918a0e39b2980cdd0f66d2fcc39
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/spells05.tga"
+  md5: 3dedb9752746adf8142620f46000e5af
+  date: "20261011"
+  size: 214292
+- name: "uifiles/pz_ui/spells06.tga"
+  md5: 436a58906128d3b5b9d96b5ec5f9f3b4
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/spells07.tga"
+  md5: f4e9312811bb04dc1e953f7877552143
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/succor.txt"
+  md5: c8fa28ba09e60100b59c9048e15a49d1
+  date: "20261011"
+  size: 8367
+- name: "uifiles/pz_ui/tabs.txt"
+  md5: 938f6172fb7ad46f09024f890046e2b0
+  date: "20261011"
+  size: 136
+- name: "uifiles/pz_ui/TargetBox.tga"
+  md5: 94fbba10fee3ec1a6fbe64c65e046e0f
+  date: "20261011"
+  size: 9253
+- name: "uifiles/pz_ui/velious.txt"
+  md5: 7f1aa4d2b8ec46aae810674c099f2da7
+  date: "20261011"
+  size: 1083
+- name: "uifiles/pz_ui/warrior01.tga"
+  md5: 149dc6f7c6f9db74ef3ed7de05dda006
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/warrior02.tga"
+  md5: cde7b1792c70a7df41bd9a59b21cfa63
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/warrior03.tga"
+  md5: e082a297ab997bb5c23d1165111eaddc
+  date: "20261011"
+  size: 32786
+- name: "uifiles/pz_ui/window_pieces01.tga"
+  md5: 146d6cf8575d323179e7c43519df69eb
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/window_pieces02.tga"
+  md5: 8b4b8c9fc6bee85bc6363cf3f7d58622
+  date: "20261011"
+  size: 263205
+- name: "uifiles/pz_ui/window_pieces03.tga"
+  md5: 96d4a22b88a0d34961c2fa4026c83139
+  date: "20261011"
+  size: 263205
+- name: "uifiles/pz_ui/window_pieces04.tga"
+  md5: fe9f52865009b0e2bbb053d920827efb
+  date: "20261011"
+  size: 263205
+- name: "uifiles/pz_ui/window_pieces05.tga"
+  md5: a1e4368d1d6094aa69e05739313d617f
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/wizard01.tga"
+  md5: 249d0d665a2c7e8e10b6e39bdda1ace7
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/wizard02.tga"
+  md5: 91f609136922e349f6d97ecdc81f71c2
+  date: "20261011"
+  size: 262162
+- name: "uifiles/pz_ui/wnd_bg_black.tga"
+  md5: a4592f6f6e5beb9f750c5a2130905d12
+  date: "20261011"
+  size: 7862
+- name: "uifiles/pz_ui/wnd_bg_dark_rock.tga"
+  md5: dd39ac1205c04254819d250e0f7337d1
+  date: "20261011"
+  size: 262188
+- name: "uifiles/pz_ui/wnd_bg_light_rock.tga"
+  md5: 16e3414c2432c8102b3838b888b1336c
+  date: "20261011"
+  size: 2604
 - name: "uifiles/zeal/big_xml/EQUI_OptionsWindow.xml"
   md5: a8412a88aae92ebfea9dd39c0e356938
   date: "20261011"

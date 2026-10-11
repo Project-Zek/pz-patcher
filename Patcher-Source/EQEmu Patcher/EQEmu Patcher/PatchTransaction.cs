@@ -26,6 +26,12 @@ namespace EQEmu_Patcher
             allowLoopback=testLoopback;
         }
         internal string Marker { get { return Resolve("LaunchSupport/patch-incomplete.txt"); } }
+        // Validate ordinary paths first; use the extended Windows spelling only
+        // for file I/O so nested download/backup paths do not hit MAX_PATH.
+        static string IoPath(string full) {
+            if(Path.DirectorySeparatorChar!='\\' || full.Length<248)return full;
+            return full.StartsWith(@"\\")?@"\\?\UNC\"+full.Substring(2):@"\\?\"+full;
+        }
         internal string Resolve(string relative) {
             if(String.IsNullOrWhiteSpace(relative) || Path.IsPathRooted(relative) || relative.IndexOfAny(new[]{':','\0','"','<','>','|','?','*'})>=0)
                 throw new IOException("Unsafe patch path: "+relative);
@@ -39,12 +45,12 @@ namespace EQEmu_Patcher
             if(!full.StartsWith(root+Path.DirectorySeparatorChar,StringComparison.OrdinalIgnoreCase)) throw new IOException("Patch path leaves the client folder.");
             string cursor=root;
             foreach(var part in parts) {
-                if((File.Exists(cursor)||Directory.Exists(cursor)) && (File.GetAttributes(cursor)&FileAttributes.ReparsePoint)!=0)
+                if((File.Exists(IoPath(cursor))||Directory.Exists(IoPath(cursor))) && (File.GetAttributes(IoPath(cursor))&FileAttributes.ReparsePoint)!=0)
                     throw new IOException("Patch path uses a link: "+relative);
                 cursor=Path.Combine(cursor,part);
             }
-            if((File.Exists(full)||Directory.Exists(full)) && (File.GetAttributes(full)&FileAttributes.ReparsePoint)!=0) throw new IOException("Patch target is a link: "+relative);
-            return full;
+            if((File.Exists(IoPath(full))||Directory.Exists(IoPath(full))) && (File.GetAttributes(IoPath(full))&FileAttributes.ReparsePoint)!=0) throw new IOException("Patch target is a link: "+relative);
+            return IoPath(full);
         }
         internal static string Md5(string path) {
             using(var hash=MD5.Create()) using(var stream=File.OpenRead(path))

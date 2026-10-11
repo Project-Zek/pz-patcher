@@ -1,4 +1,4 @@
-# Project Zek patcher source — 1.0.17.0
+# Project Zek patcher source — 1.0.18.0
 
 The patcher downloads and repairs the client files listed in the current MD5 manifest, then launches the game and closes. Graphics, Zeal frame limit and resolution choices are remembered. All integrated Classic fixes and optional music settings remain included. Windows controls monitor refresh; there is no refresh selector.
 
@@ -11,3 +11,5 @@ Build an online executable with VS2022 and .NET Framework 4.8 tools:
 Without -Online, the source defaults to explicit offline test mode. The script uses the sibling pinned Dependency-Cache when available; otherwise it restores NuGet dependencies. The complete native Zeal, eqgame.dll and EQW sources are in the separate All-Fixes-1.0.17 source bundle. This repository folder contains the patcher source.
 
 The patcher uses the downloaded manifest's current MD5 values rather than fixed launch SHA lists. Zeal.asi and eqgame.dll must still be released as a matched native pair. Appearance changes rebuild the user's local assets through Classic fixes; base client archives and music are not part of the core hosted patch.
+
+Version 1.0.18 supports extended Windows paths for nested patch downloads and backups after normal manifest path validation. This allows optional pz_ui Extras to install under longer client folder paths. No system registry changes are needed. Native client files remain the matched 1.0.17 pair.

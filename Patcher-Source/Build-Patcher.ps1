@@ -1,5 +1,5 @@
 param(
-    [string]$Version='1.0.17.0',
+    [string]$Version='1.0.18.0',
     [string]$FileName='Project-Zek-Patcher',
     [string]$ManifestUrl,
     [string]$OutputDirectory,

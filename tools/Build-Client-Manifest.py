@@ -1,6 +1,7 @@
 """Generate this patcher's MD5 manifest from a versioned client payload.
 
 Run from the repository root after adding all files to client/<snapshot>.
+Zeal and pz_ui skin folders are supported, including optional Extras; pz_ui backup files are excluded.
 Music and player settings are intentionally excluded from this release channel.
 """
 import argparse
@@ -27,13 +28,15 @@ def build(root, snapshot, version):
             continue
         name = path.relative_to(payload).as_posix()
         lower = name.lower()
+        if lower.startswith("uifiles/pz_ui/") and ".bak" in path.name.lower():
+            continue
         if path.suffix.lower() in {".mp3", ".wav", ".xmi", ".mid", ".midi", ".emt"}:
             raise ValueError("Music stays in the separate music pack: " + name)
-        if lower not in {"zeal.asi", "eqgame.dll", "eqw.dll", "d3d8.dll", "spells_en.txt", "eqhost.txt"} and not lower.startswith("uifiles/zeal/"):
+        if lower not in {"zeal.asi", "eqgame.dll", "eqw.dll", "d3d8.dll", "spells_en.txt", "eqhost.txt"} and not lower.startswith(("uifiles/zeal/", "uifiles/pz_ui/")):
             raise ValueError("Unapproved release path (music/settings/base archives stay separate): " + name)
         if lower in names or any(part in {".", ".."} or part.endswith((".", " ")) for part in name.split("/")):
             raise ValueError("Duplicate or unsafe release path: " + name)
-        if not re.fullmatch(r"[A-Za-z0-9_./ -]+", name):
+        if not re.fullmatch(r"[A-Za-z0-9_./ ()+-]+", name):
             raise ValueError("Unsupported release filename: " + name)
         names.add(lower)
         data = path.read_bytes()

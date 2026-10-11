@@ -32,7 +32,7 @@ class MinimalPatcherTests {
         Application.EnableVisualStyles();assembly=Assembly.LoadFrom(args[0]);client=assembly.GetType("Client",true);main=assembly.GetType("EQEmu_Patcher.MainForm",true);
         root=args[1];url=args[2];Directory.CreateDirectory(root);client.GetField("Root",Flags).SetValue(null,root);main.GetField("OfflineReview",Flags).SetValue(null,true);
         verifier=FormatterServices.GetUninitializedObject(main);
-        Check(assembly.GetName().Name=="Project-Zek-Patcher"&&assembly.GetName().Version.ToString()=="1.0.17.0","new patcher name and version");
+        Check(assembly.GetName().Name=="Project-Zek-Patcher"&&assembly.GetName().Version.ToString()=="1.0.18.0","new patcher name and version");
         var program=assembly.GetType("EQEmu_Patcher.Program",true);
         Check(!(bool)Call(program,"SelectReviewMode",null,new object[]{new string[0]})&&(bool)Call(program,"SelectReviewMode",null,new object[]{new[]{"--offline"}}),"online-capable default with explicit local-test mode");
         Check((string)Call(main,"ResolveManifestUrl",null,"","")=="","blank server address is intentionally unconfigured");
@@ -63,8 +63,14 @@ class MinimalPatcherTests {
         main.GetField("OfflineReview",Flags).SetValue(null,false);
         using(var form=(Form)Activator.CreateInstance(main)){
             var handle=form.Handle;
-            ((Task)Call(main,"InitializeAsync",form)).GetAwaiter().GetResult();
-            Check(!(bool)main.GetField("isLoading",Flags).GetValue(form)&&!form.Controls.Find("btnCheck",true)[0].Enabled&&!form.Controls.Find("btnStart",true)[0].Enabled,"blank endpoint opens normally and disables downloads/Play without network requests");
+            var manifestAttribute=assembly.GetCustomAttributes(assembly.GetType("EQEmu_Patcher.FileListUrl",true),false)[0];
+            string built=(string)manifestAttribute.GetType().GetProperty("Value").GetValue(manifestAttribute,null);
+            if(String.IsNullOrWhiteSpace(built)) {
+                ((Task)Call(main,"InitializeAsync",form)).GetAwaiter().GetResult();
+                Check(!(bool)main.GetField("isLoading",Flags).GetValue(form)&&!form.Controls.Find("btnCheck",true)[0].Enabled&&!form.Controls.Find("btnStart",true)[0].Enabled,"blank endpoint opens normally and disables downloads/Play without network requests");
+            } else {
+                Check((string)Call(main,"ResolveManifestUrl",null,"",built)==built,"configured online build uses its valid manifest address; local tests do not fetch public metadata");
+            }
             Check(form.Text=="Project-Zek-Patcher","normal patcher title retained");
         }
         Console.WriteLine("SUMMARY\t"+passed+" checks passed; no game, browser, PowerShell or administrator action started.");return 0;

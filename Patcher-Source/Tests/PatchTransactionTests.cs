@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Collections.Generic;
 using EQEmu_Patcher;
+[assembly:System.Runtime.Versioning.TargetFramework(".NETFramework,Version=v4.8")]
 class PatchTransactionTests {
     static string root, url;static int failed;
     static readonly byte[] a=Encoding.ASCII.GetBytes("NEW-A-123"), b=Encoding.ASCII.GetBytes("NEW-B-456");
@@ -29,6 +30,27 @@ class PatchTransactionTests {
             Check(!File.Exists(Path.Combine(path,"obsolete.txt")),"Deletion missing");
             Check(Directory.GetFiles(Path.Combine(path,"LaunchSupport/patch-transactions"),"obsolete.txt",SearchOption.AllDirectories).Length==1,"Deleted file backup missing");
             Check(!File.Exists(new PatchTransaction(path).Marker),"Completion marker left behind");
+        });
+        await Test("long download and backup paths preserve originals",async()=> {
+            string path=ClientRoot("long-path-"+new string('x',40));
+            var transaction=new PatchTransaction(path,true);
+            await transaction.ApplyAsync(Files(),null,new Uri(url+"/long/"),CancellationToken.None,x=>{},x=>{});
+            Check(File.ReadAllBytes(transaction.Resolve("a.txt")).Length==a.Length,"Long download did not install");
+            string directory=Directory.GetDirectories(transaction.Resolve("LaunchSupport/patch-transactions"))[0];
+            string relative="LaunchSupport/patch-transactions/"+Path.GetFileName(directory)+"/backup/a.txt";
+            Check(Path.Combine(path,relative).Length>260,"Test did not exceed MAX_PATH");
+            Check(File.ReadAllText(transaction.Resolve(relative))=="OLD-A","Long backup did not preserve the previous file");
+            Check(!File.Exists(transaction.Marker),"Long update left its incomplete marker");
+        });
+        await Test("long backup paths roll back a sharing violation",async()=> {
+            string path=ClientRoot("long-rollback-"+new string('x',40));var transaction=new PatchTransaction(path,true);
+            FileStream locked=null;bool rejected=false;
+            try {
+                await transaction.ApplyAsync(Files(),null,new Uri(url+"/long-locked/"),CancellationToken.None,x=>{},x=>{if(x=="Verified b.txt")locked=new FileStream(transaction.Resolve("b.txt"),FileMode.Open,FileAccess.Read,FileShare.None);});
+            } catch(IOException){rejected=true;}finally{if(locked!=null)locked.Dispose();}
+            Check(rejected,"Long-path sharing violation was not observed");
+            Check(File.ReadAllText(transaction.Resolve("a.txt"))=="OLD-A"&&File.ReadAllText(transaction.Resolve("b.txt"))=="OLD-B","Long-path rollback did not restore the originals");
+            Check(!File.Exists(transaction.Marker),"Long-path rollback left an incomplete marker");
         });
         await Test("already matching files do not download",async()=> {
             string path=ClientRoot("already");File.WriteAllBytes(Path.Combine(path,"a.txt"),a);File.WriteAllBytes(Path.Combine(path,"b.txt"),b);
