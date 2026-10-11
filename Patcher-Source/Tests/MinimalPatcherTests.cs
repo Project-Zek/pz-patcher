@@ -32,7 +32,7 @@ class MinimalPatcherTests {
         Application.EnableVisualStyles();assembly=Assembly.LoadFrom(args[0]);client=assembly.GetType("Client",true);main=assembly.GetType("EQEmu_Patcher.MainForm",true);
         root=args[1];url=args[2];Directory.CreateDirectory(root);client.GetField("Root",Flags).SetValue(null,root);main.GetField("OfflineReview",Flags).SetValue(null,true);
         verifier=FormatterServices.GetUninitializedObject(main);
-        Check(assembly.GetName().Name=="Project-Zek-Patcher"&&assembly.GetName().Version.ToString()=="1.0.18.0","new patcher name and version");
+        Check(assembly.GetName().Name=="Project-Zek-Patcher"&&assembly.GetName().Version.ToString()=="1.0.19.0","new patcher name and version");
         var program=assembly.GetType("EQEmu_Patcher.Program",true);
         Check(!(bool)Call(program,"SelectReviewMode",null,new object[]{new string[0]})&&(bool)Call(program,"SelectReviewMode",null,new object[]{new[]{"--offline"}}),"online-capable default with explicit local-test mode");
         Check((string)Call(main,"ResolveManifestUrl",null,"","")=="","blank server address is intentionally unconfigured");

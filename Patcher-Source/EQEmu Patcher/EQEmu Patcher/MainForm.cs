@@ -432,7 +432,12 @@ namespace EQEmu_Patcher
             btnStart.Enabled=graphicsChoice.Enabled=frameChoice.Enabled=displayRepair.Enabled=runtimeInstall.Enabled=classicFixes.Enabled=false;
             StatusLibrary.SetPatchState(true); bool completed=false;
             try {
+                StatusLibrary.Log("Checking the latest server file list...");
+                string response=await DownloadFile(cts,filelistUrl,"filelist.yml");
+                if(response!="")throw new System.IO.IOException("Could not refresh the server file list: "+response);
+                cts.Token.ThrowIfCancellationRequested();
                 var manifest=ReadManifest();
+                StatusLibrary.Log("Server file list: "+manifest.version+" ("+manifest.downloads.Count+" files).");
                 await new PatchTransaction(Client.Root).ApplyAsync(
                     manifest.downloads.Select(x=>new PatchFile(x.name,x.md5,x.size)),
                     (manifest.deletes??new List<FileEntry>()).Select(x=>x.name),new Uri(manifest.downloadprefix),

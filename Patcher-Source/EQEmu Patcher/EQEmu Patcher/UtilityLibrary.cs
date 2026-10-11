@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,25 +53,48 @@ namespace EQEmu_Patcher
         // Download will grab a remote URL's file and return the data as a byte array
         public static async Task<byte[]> Download(CancellationTokenSource cts, string url)
         {
-            var uri=new Uri(url);
-            if(uri.Scheme!="https")throw new IOException("Manifest and patcher metadata require HTTPS.");
             using(var handler=new HttpClientHandler {AllowAutoRedirect=false})
             using(var client=new HttpClient(handler) {Timeout=TimeSpan.FromMinutes(2)})
-            using(var response=await client.GetAsync(uri,HttpCompletionOption.ResponseHeadersRead,cts.Token))
+                return await DownloadMetadata(cts,url,client);
+        }
+
+        internal static Uri FreshMetadataUri(string url)
+        {
+            var uri=new Uri(url);
+            if(uri.Scheme!="https")throw new IOException("Manifest and patcher metadata require HTTPS.");
+            // GitHub raw serves mutable branch URLs through a CDN. A unique
+            // metadata query avoids an earlier manifest during a new release.
+            // Preserve other hosts' URLs, which may contain signed queries.
+            if(!uri.Host.Equals("raw.githubusercontent.com",StringComparison.OrdinalIgnoreCase))return uri;
+            var builder=new UriBuilder(uri);
+            string query=builder.Query.TrimStart('?');
+            builder.Query=(query.Length==0?"":query+"&")+"_pz_metadata="+Guid.NewGuid().ToString("N");
+            return builder.Uri;
+        }
+
+        internal static async Task<byte[]> DownloadMetadata(CancellationTokenSource cts,string url,HttpClient client)
+        {
+            using(var request=new HttpRequestMessage(HttpMethod.Get,FreshMetadataUri(url)))
             {
-                response.EnsureSuccessStatusCode();
-                const int limit=16*1024*1024;
-                if(response.Content.Headers.ContentLength.GetValueOrDefault()>limit)throw new IOException("Metadata exceeds the size limit.");
-                using(var stream=await response.Content.ReadAsStreamAsync())
-                using(var w=new MemoryStream())
+                request.Headers.CacheControl=new System.Net.Http.Headers.CacheControlHeaderValue {NoCache=true,NoStore=true};
+                request.Headers.Pragma.ParseAdd("no-cache");
+                using(var response=await client.SendAsync(request,HttpCompletionOption.ResponseHeadersRead,cts.Token))
                 {
-                    byte[] buffer=new byte[81920];int count;
-                    while((count=await stream.ReadAsync(buffer,0,buffer.Length,cts.Token))>0) {if(w.Length+count>limit)throw new IOException("Metadata exceeds the size limit.");w.Write(buffer,0,count);}
-                    if(response.Content.Headers.ContentLength.HasValue && w.Length!=response.Content.Headers.ContentLength.Value)throw new IOException("Incomplete metadata download.");
-                    return w.ToArray();
+                    response.EnsureSuccessStatusCode();
+                    const int limit=16*1024*1024;
+                    if(response.Content.Headers.ContentLength.GetValueOrDefault()>limit)throw new IOException("Metadata exceeds the size limit.");
+                    using(var stream=await response.Content.ReadAsStreamAsync())
+                    using(var w=new MemoryStream())
+                    {
+                        byte[] buffer=new byte[81920];int count;
+                        while((count=await stream.ReadAsync(buffer,0,buffer.Length,cts.Token))>0) {if(w.Length+count>limit)throw new IOException("Metadata exceeds the size limit.");w.Write(buffer,0,count);}
+                        if(response.Content.Headers.ContentLength.HasValue && w.Length!=response.Content.Headers.ContentLength.Value)throw new IOException("Incomplete metadata download.");
+                        return w.ToArray();
+                    }
                 }
             }
         }
+
 
         public static string GetMD5(string filename)
         {
