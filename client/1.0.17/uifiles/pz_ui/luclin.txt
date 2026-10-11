@@ -1,0 +1,81 @@
+[Dawnshroud Peaks]
+Maidens Eye				+1102	-1500
+Netherbian Lair				+1559	-185
+Griegs End				-1750	-875
+Sanctus Seru				+0	+2000
+Rockhopper Cave				+1100	-1500
+
+[Echo Caverns]
+Fungus Grove				+1145	+1035
+The Deep				+640	-380
+Shadow Haven				+830	-900
+Secret Outpost City (sliding door)	+970	-735	Note that there is a safe and a dangerous side
+Bank					-995	-606
+
+[Fungus Grove]
+Echo Caverns				-2330	-1145
+Twilight Sea				+1955	+2330
+Bank					-995	-606
+
+[The Grey]
+// Enduring Breath required
+Mons Letalis				-1750	+320
+Scarlet Desert				+550	-1850
+Ssra Temple				+70	-100
+
+[Grimling Forest]
+Acrylia Caverns				+890	+1030
+Hollowshade Moor			-1790	-1290
+Tenebrous Mountains			+1550	-250
+Bank					-880	-1200
+
+[Hollowshade Moor]
+Grimling Forest				+2742	-2570
+Paludal Caverns				-1640	+3020
+Shar Vahl				+1231	+2635
+
+[Maidens Eye]
+Akheva Ruins				-1672	+300
+Dawnshroud Peaks			+800	+1600
+Umbral Plains				-335	-1625
+
+[Marus Seru]
+Mons Letalis				+1610	-1070
+Dawnshroud Peaks			+500	-1327
+Sanctus Seru				-1707	-1026
+Netherbian Lair				+535	-1463
+
+[Mons Letalis]
+The Grey				+1325	+0
+Marus Seru				-1700	-630
+
+[Netherbian Lair]
+Dawnshroud Peaks			-675	+25
+Marus Seru				+460	+1000
+Nexus					+1460	+25
+Shadow Haven				+1500	+80
+Central Column				+500	+0
+
+[Scarlet Desert]
+Griegs End				+2300	-500
+Twighlight Sea				-1070	-1650
+The Grey				+735	+1700
+
+[Shadeweavers Thicket]
+Paludal Caverns				+1550	-380
+Shar Vahl				-2070	-3590
+Bank					-1700	-2900
+
+[Tenebrous Mountains]
+Grimling Forest				-1550	-1230
+Katta Castellum				+55	+1730
+
+[Twilight Sea]
+Fungus Grove				-1300	+400
+Katta Castellum				-110	-1865
+Scarlet Desert				-1080	+1800
+Docks					+0	-2000
+
+[Umbral Plains]
+Maidens Eye				-485	+1715
+Vex Thal				-1500	-740

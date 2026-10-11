@@ -1,0 +1,111 @@
+[Burning Woods]
+Skyfire Mountains			+5300	+1575
+Frontier Mountains			-2580	-4150
+Chardok					+6200	-4000
+Sarnak Temple				-1200	-3945
+Giant Fort				+990	+1025
+Meteor					-2870	-4820	Slixin Klex nearby
+Hornets Nest				-2580	+2700
+
+[City of Mist]
+Emerald Jungle				+28	-734
+
+[Dreadlands]
+Burning Woods				+2500	-860
+Frontier Mountains			+2140	-3880
+Firiona Vie				+400	-5900
+Tunnel (Lost Valley side)		-183	+5491
+Tunnel (Dreadlands side)		+692	+6666
+Karnor's Castle				+500	-2250
+Giant Fort				-483	+1660
+Druid Ring				+2550	+7500
+Wizard Spires				+3050	+9000	Nexus
+
+[Emerald Jungle]
+Trakanon's Teeth			-3430	+1500
+Field of Bone				-1720	+5220
+City of Mist				+300	-1900
+Druid Landing				-3100	+3500
+Wizard Landing				-1260	+3500
+
+[Field of Bone]
+Emerald Jungle				-1900	-1250
+East Cabilis				+2000	-2700
+Swamp of No Hope			-3350	+1000
+Warslik Woods				+1400	+4300
+Kaesora					-1900	-300	Melees may bind here
+Kurn's Tower				+750	+1300
+
+[Firiona Vie]
+Lake of Ill Omens			+1290	+3520
+Swamp of No Hope			+4940	+2750
+Swamp of No Hope			+5566	-1028
+Tunnel to Dreadlands			-200	+3600
+City Bridge				-2450	-2050
+Drolvarg Underground			+641	-2090
+Forest Giant Camp			+2157	-2985
+
+[Frontier Mountains]
+Lake of Ill Omens			-450	-4550
+Dreadlands				-3700	-3300
+Burning Woods				-2600	+3800
+The Overthere				+4000	+1400
+Temple of Droga				-3400	+2900
+Mines of Nurga				-2900	-630
+Giant Fort				+0	-1200
+Ruins					-2200	+1500	Melees may bind here
+
+[Lake of Ill Omens]
+Firiona Vie				+1290	-4410
+Frontier Mountains			-410	+3350
+West Cabilis				+5940	-6030
+Sarnak Fortress				-2650	+2600
+Windmill				-2618	-2966
+
+[The Overthere]
+Frontier Mountains			-6000	+1400
+Skyfire Mountains			-1000	+4200
+Warslik Woods				-315	-4200
+Sarnak Tower				-2000	-3000
+Howling Stones				+92	+1543
+Evil Outpost				+2560	+2100
+Docks					+3451	+2732
+
+[Skyfire Mountains]
+Burning Woods				-4080	+1620
+The Overthere				-1140	-3910
+Veeshan's Peak				+2400	+3000
+Druid Landing				-3150	+2650
+Wizard Landing				-3100	+800
+
+[Swamp of No Hope]
+Firiona Vie				-4490	+2610
+Firiona Vie				+0	+0
+East Cabilis				+2520	+2950
+Field of Bone				+5570	+1030
+Trakanon's Teeth			+1280	-3500
+
+[Timorous Deep]
+Docks					+7100	+3440	Oasis of Marr
+Docks					+5857	+3628	The Overthere
+Elven Outpost / Docks			-4537	+3265	Firiona Vie
+Chessboard Island			+3000	-6000
+Firepots Spires				-12000	+4400
+Golra Island				-8964	-5711
+Raptor Island				-9200	+3200
+Spiroc Island				+5829	+1198
+Hidden Island				-11600	-2100	Inn and various Epic quest NPCs
+
+[Trakanon's Teeth]
+Swamp of No Hope			+1560	+4460
+Old Sebilis				-2200	+2655
+Emperor Ganak				-3330	+2655
+
+[Warslik Woods]
+Lake of Ill Omens			-2300	+1450
+Field of Bone				+3650	-2610
+The Overthere				-240	+4000
+West Cabilis				-2080	-840
+Giant Fort				-1130	+651
+Goblin City				+1400	+2500
+Ssolet Dnaass				+3900	+250

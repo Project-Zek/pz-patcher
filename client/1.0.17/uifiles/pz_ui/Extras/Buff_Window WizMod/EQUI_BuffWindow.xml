@@ -1,0 +1,756 @@
+<?xml version = "1.0"?>
+<XML ID = "EQInterfaceDefinitionLanguage">
+	<Schema xmlns = "EverQuestData" xmlns:dt = "EverQuestDataTypes"/>
+
+	<StaticText item = "BW_L0">
+		<ScreenID> BW_L0 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>8</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>1</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff0_Button">
+		<ScreenID>Buff0</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>3</X>
+			<Y>3</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L1">
+		<ScreenID> BW_L1 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>41</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>2</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff1_Button">
+		<ScreenID>Buff1</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>48</X>
+			<Y>3</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L2">
+		<ScreenID> BW_L2 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>74</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>3</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff2_Button">
+		<ScreenID>Buff2</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>93</X>
+			<Y>3</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L3">
+		<ScreenID> BW_L3 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>107</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>4</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff3_Button">
+		<ScreenID>Buff3</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>3</X>
+			<Y>49</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L4">
+		<ScreenID> BW_L4 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>140</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>5</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff4_Button">
+		<ScreenID>Buff4</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>48</X>
+			<Y>49</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L5">
+		<ScreenID> BW_L5 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>173</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>6</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff5_Button">
+		<ScreenID>Buff5</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>93</X>
+			<Y>49</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L6">
+		<ScreenID> BW_L6 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>206</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>7</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff6_Button">
+		<ScreenID>Buff6</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L7">
+		<ScreenID> BW_L7 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>239</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>8</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff7_Button">
+		<ScreenID>Buff7</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>48</X>
+			<Y>95</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L8">
+		<ScreenID> BW_L8 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>272</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>9</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff8_Button">
+		<ScreenID>Buff8</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>93</X>
+			<Y>95</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L9">
+		<ScreenID> BW_L9 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>305</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>10</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff9_Button">
+		<ScreenID>Buff9</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>3</X>
+			<Y>141</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L10">
+		<ScreenID> BW_L10 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>338</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>11</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff10_Button">
+		<ScreenID>Buff10</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>48</X>
+			<Y>141</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L11">
+		<ScreenID> BW_L11 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>371</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>12</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff11_Button">
+		<ScreenID>Buff11</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>93</X>
+			<Y>141</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L12">
+		<ScreenID> BW_L12 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>404</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>13</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff12_Button">
+		<ScreenID>Buff12</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>3</X>
+			<Y>187</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L13">
+		<ScreenID> BW_L13 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>437</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>14</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff13_Button">
+		<ScreenID>Buff13</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>48</X>
+			<Y>187</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+	<StaticText item = "BW_L14">
+		<ScreenID> BW_L14 </ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>1</X>
+			<Y>470</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<Text>15</Text>
+		<TextColor>
+			<R>128</R>
+			<G>128</G>
+			<B>128</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>true</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</StaticText>
+
+	<Button item = "BW_Buff14_Button">
+		<ScreenID>Buff14</ScreenID>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>93</X>
+			<Y>187</Y>
+		</Location>
+		<Size>
+			<CX>32</CX>
+			<CY>32</CY>
+		</Size>
+		<ButtonDrawTemplate>
+			<Normal>BlueIconBackground</Normal>
+			<NormalDecal>A_SpellIcons</NormalDecal>
+		</ButtonDrawTemplate>
+		<DecalOffset>
+			<X>0</X>
+			<Y>0</Y>
+		</DecalOffset>
+		<DecalSize>
+			<CX>32</CX>
+			<CY>32</CY>
+		</DecalSize>
+	</Button>
+
+
+	<Screen item = "BuffWindow">
+		<RelativePosition>false</RelativePosition>
+		<Location>
+			<X>415</X>
+			<Y>0</Y>
+		</Location>
+		<Size>
+			<CX>42</CX>
+			<CY>505</CY>
+		</Size>
+		<Style_Transparent>false</Style_Transparent>
+		<DrawTemplate>WDT_RoundedNoTitle</DrawTemplate>
+		<Style_Titlebar>false</Style_Titlebar>
+		<Style_Closebox>false</Style_Closebox>
+		<Style_Minimizebox>false</Style_Minimizebox>
+		<Style_Border>true</Style_Border>
+		<Style_Sizable>false</Style_Sizable>
+		<Pieces>BW_Buff0_Button</Pieces>
+		<Pieces>BW_Buff1_Button</Pieces>
+		<Pieces>BW_Buff2_Button</Pieces>
+		<Pieces>BW_Buff3_Button</Pieces>
+		<Pieces>BW_Buff4_Button</Pieces>
+		<Pieces>BW_Buff5_Button</Pieces>
+		<Pieces>BW_Buff6_Button</Pieces>
+		<Pieces>BW_Buff7_Button</Pieces>
+		<Pieces>BW_Buff8_Button</Pieces>
+		<Pieces>BW_Buff9_Button</Pieces>
+		<Pieces>BW_Buff10_Button</Pieces>
+		<Pieces>BW_Buff11_Button</Pieces>
+		<Pieces>BW_Buff12_Button</Pieces>
+		<Pieces>BW_Buff13_Button</Pieces>
+		<Pieces>BW_Buff14_Button</Pieces>
+		<Pieces>BW_L0</Pieces>
+		<Pieces>BW_L1</Pieces>
+		<Pieces>BW_L2</Pieces>
+		<Pieces>BW_L3</Pieces>
+		<Pieces>BW_L4</Pieces>
+		<Pieces>BW_L5</Pieces>
+		<Pieces>BW_L6</Pieces>
+		<Pieces>BW_L7</Pieces>
+		<Pieces>BW_L8</Pieces>
+		<Pieces>BW_L9</Pieces>
+		<Pieces>BW_L10</Pieces>
+		<Pieces>BW_L11</Pieces>
+		<Pieces>BW_L12</Pieces>
+		<Pieces>BW_L13</Pieces>
+		<Pieces>BW_L14</Pieces>
+	</Screen>
+
+</XML>
