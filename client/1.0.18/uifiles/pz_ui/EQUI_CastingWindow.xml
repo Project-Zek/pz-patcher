@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<XML ID="EQInterfaceDefinitionLanguage">
+  <Schema xmlns="EverQuestData" xmlns:dt="EverQuestDataTypes" />
+
+    <Label item="Casting_SpellNameBG">
+    <ScreenID />
+    <EQType>134</EQType>
+    <Font>5</Font>
+    <RelativePosition>true</RelativePosition>
+    <Location>
+      <X>4</X>
+      <Y>0</Y>
+    </Location>
+    <Size>
+      <CX>256</CX>
+      <CY>20</CY>
+    </Size>
+    <Text />
+    <TextColor>
+      <R>255</R>
+      <G>255</G>
+      <B>255</B>
+    </TextColor>
+    <NoWrap>true</NoWrap>
+    <AlignCenter>true</AlignCenter>
+    <AlignRight>false</AlignRight>
+  </Label>
+
+  <Gauge item="Casting_Gauge">
+    <ScreenID>CastingGauge</ScreenID>
+    <TextColor>
+      <R>255</R>
+      <G>255</G>
+      <B>255</B>
+    </TextColor>
+    <RelativePosition>true</RelativePosition>
+    <Location>
+      <X>1</X>
+      <Y>1</Y>
+    </Location>
+    <Size>
+      <CX>256</CX>
+      <CY>16</CY>
+    </Size>
+		<TextOffsetY>-50</TextOffsetY>
+		<GaugeOffsetY>0</GaugeOffsetY>
+		<GaugeOffsetX>0</GaugeOffsetX>
+    <Style_VScroll>false</Style_VScroll>
+    <Style_HScroll>false</Style_HScroll>
+    <Style_Transparent>false</Style_Transparent>
+    <TooltipReference>Casting Bar</TooltipReference>
+    <FillTint>
+      <R>171</R>
+      <G>0</G>
+      <B>171</B>
+    </FillTint>
+    <LinesFillTint>
+      <R>220</R>
+      <G>220</G>
+      <B>0</B>
+    </LinesFillTint>
+    <DrawLinesFill>false</DrawLinesFill>
+    <EQType>7</EQType>
+    <GaugeDrawTemplate>
+       <Fill>Custom_HP_Fill</Fill>
+    </GaugeDrawTemplate>
+  </Gauge>
+
+<!--  <TextureInfo item="TargetBox.tga">
+    <Size>
+      <CX>128</CX>
+      <CY>32</CY>
+    </Size>
+  </TextureInfo>-->
+
+  <Ui2DAnimation item="A_CastingBox">
+    <Cycle>false</Cycle>
+    <Frames>
+      <Texture>TargetBox.tga</Texture>
+      <Location>
+        <X>6</X>
+        <Y>2</Y>
+      </Location>
+      <Size>
+        <CX>116</CX>
+        <CY>32</CY>
+      </Size>
+    </Frames>
+  </Ui2DAnimation>
+
+  <StaticAnimation item="A_CastingBoxStaticAnim">
+    <ScreenID>A_CastingtBoxStaticAnim</ScreenID>
+    <Animation>A_CastingBox</Animation>
+  </StaticAnimation>
+
+  <Screen item="CastingWindow">
+    <ScreenID />
+    <RelativePosition>false</RelativePosition>
+    <Location>
+      <X>516</X>
+      <Y>242</Y>
+    </Location>
+    <Size>
+      <CX>266</CX>
+      <CY>26</CY>
+    </Size>
+    <Text>Target</Text>
+    <Style_VScroll>false</Style_VScroll>
+    <Style_HScroll>false</Style_HScroll>
+    <Style_Transparent>false</Style_Transparent>
+    <TooltipReference>Your Current Casting Spell</TooltipReference>
+    <DrawTemplate>WDT_RoundedNoTitle</DrawTemplate>
+    <Style_Titlebar>false</Style_Titlebar>
+    <Style_Closebox>false</Style_Closebox>
+    <Style_Minimizebox>false</Style_Minimizebox>
+    <Style_Border>true</Style_Border>
+    <Style_Sizable>false</Style_Sizable>
+    <Pieces>Casting_Gauge</Pieces>
+    <Pieces>Casting_SpellNameBG</Pieces>
+    <!-- <Pieces>A_TargetBoxStaticAnim</Pieces> -->
+  </Screen>
+</XML>

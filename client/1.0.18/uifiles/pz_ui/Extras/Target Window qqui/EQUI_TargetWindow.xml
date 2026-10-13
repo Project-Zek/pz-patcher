@@ -1,0 +1,256 @@
+<?xml version = "1.0"?>
+<XML ID = "EQInterfaceDefinitionLanguage">
+	<Schema xmlns = "EverQuestData" xmlns:dt = "EverQuestDataTypes"/>
+
+	<TextureInfo item = "TargetBox.tga">
+		<Size>
+			<CX>32</CX>
+			<CY>64</CY>
+		</Size>
+	</TextureInfo>
+	
+	<Ui2DAnimation item="A_TargetBox">
+		<Cycle>false</Cycle>
+		<Frames>
+			<Texture>TargetBox.tga</Texture>
+			<Location>
+				<X>0</X>
+				<Y>0</Y>
+			</Location>
+			<Size>
+				<CX>6</CX>
+				<CY>48</CY>
+			</Size>
+		</Frames>
+	</Ui2DAnimation>
+
+	<StaticAnimation item="A_TargetBoxStaticAnim">
+		<ScreenID>A_TargetBoxStaticAnim</ScreenID>
+		<Animation>A_TargetBox</Animation>
+	</StaticAnimation>
+	
+	<Ui2DAnimation item = "Classic_HP_Fill">
+		<Cycle>true</Cycle>
+		<Frames>
+			<Texture>classic_pieces01.tga</Texture>
+			<Location>
+				<X>6</X>
+				<Y>160</Y>
+			</Location>
+			<Size>
+				<CX>100</CX>
+				<CY>10</CY>
+			</Size>
+			<Hotspot>
+				<X>0</X>
+				<Y>0</Y>
+			</Hotspot>
+			<Duration>1000</Duration>
+		</Frames>
+	</Ui2DAnimation>
+
+	<Gauge item = "Target_HP">
+		<ScreenID>TargetHP</ScreenID>
+		<Font>2</Font>
+		<TextColor>
+			<R>240</R>
+			<G>240</G>
+			<B>240</B>
+		</TextColor>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>0</X>
+			<Y>2</Y>
+		</Location>
+		<Size>
+			<CX>109</CX>
+			<CY>14</CY>
+		</Size>
+		<GaugeOffsetY>0</GaugeOffsetY>
+		<GaugeOffsetX>9</GaugeOffsetX>
+		<TextOffsetX>9</TextOffsetX>
+		<TextOffsetY>0</TextOffsetY>
+		<Style_VScroll>false</Style_VScroll>
+		<Style_HScroll>false</Style_HScroll>
+		<Style_Transparent>false</Style_Transparent>
+		<TooltipReference/>
+		<FillTint>
+			<R>240</R>
+			<G>0</G>
+			<B>0</B>
+		</FillTint>
+		<LinesFillTint>
+			<R>220</R>
+			<G>220</G>
+			<B>0</B>
+		</LinesFillTint>
+		<DrawLinesFill>false</DrawLinesFill>
+		<EQType>6</EQType>
+		<GaugeDrawTemplate>
+			<Fill>Classic_HP_Fill</Fill>
+		</GaugeDrawTemplate>
+	</Gauge>
+
+	<Gauge item = "Target_HP2">
+		<ScreenID>TargetHP2</ScreenID>
+		<Font>3</Font>
+		<TextColor>
+			<R>240</R>
+			<G>240</G>
+			<B>240</B>
+		</TextColor>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>0</X>
+			<Y>0</Y>
+		</Location>
+		<Size>
+			<CX>134</CX>
+			<CY>25</CY>
+		</Size>
+		<GaugeOffsetY>15</GaugeOffsetY>
+		<GaugeOffsetX>4</GaugeOffsetX>
+		<TextOffsetX>4</TextOffsetX>
+		<TextOffsetY>0</TextOffsetY>
+		<Style_VScroll>false</Style_VScroll>
+		<Style_HScroll>false</Style_HScroll>
+		<Style_Transparent>false</Style_Transparent>
+		<TooltipReference/>
+		<FillTint>
+			<R>240</R>
+			<G>0</G>
+			<B>0</B>
+		</FillTint>
+		<LinesFillTint>
+			<R>220</R>
+			<G>220</G>
+			<B>0</B>
+		</LinesFillTint>
+		<DrawLinesFill>false</DrawLinesFill>
+		<EQType>6</EQType>
+		<GaugeDrawTemplate>
+			<Background>A_GaugeBackground</Background>
+			<Fill>A_GaugeFill</Fill>
+			<Lines>A_GaugeLines</Lines>
+			<LinesFill>A_GaugeLinesFill</LinesFill>
+		</GaugeDrawTemplate>
+	</Gauge>
+
+	<Label item ="Target_HPLabel">
+		<ScreenID>HPLabel</ScreenID>
+		<Font>2</Font>
+		<EQType>29</EQType>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>73</X>
+			<Y>11</Y>
+		</Location>
+		<Size>
+			<CX>60</CX>
+			<CY>12</CY>
+		</Size>
+		<Text>Playername123456</Text>
+		<TextColor>
+				<R>240</R>
+				<G>240</G>
+				<B>240</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>false</AlignCenter>
+		<AlignRight>true</AlignRight>
+	</Label>
+
+	<Label item ="Target_HPPercLabel">
+		<ScreenID>HPPercLabel</ScreenID>
+	</Label>
+	
+	<Gauge item = "Target_Casting_Gauge">
+		<ScreenID>Gauge</ScreenID>
+		<!--<Font>3</Font> -->
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>4</X>
+			<Y>26</Y>
+		</Location>
+		<Size>
+			<CX>100</CX>
+			<CY>8</CY>
+		</Size>
+		<GaugeOffsetY>0</GaugeOffsetY>
+		<GaugeOffsetX>0</GaugeOffsetX>
+		<Style_VScroll>false</Style_VScroll>
+		<Style_HScroll>false</Style_HScroll>
+		<Style_Transparent>false</Style_Transparent>
+		<!--<TooltipReference/>-->
+		<FillTint>
+				<R>240</R>
+				<G>0</G>
+				<B>240</B>
+		</FillTint>
+		<LinesFillTint>
+				<R>0</R>
+				<G>0</G>
+				<B>0</B>
+		</LinesFillTint>
+		<DrawLinesFill>false</DrawLinesFill>
+		<EQType>7</EQType>
+		<GaugeDrawTemplate>
+			<Fill>A_GaugeFill</Fill>
+		</GaugeDrawTemplate>
+	</Gauge>
+
+	<Label item="Target_Casting_SpellName">
+		<ScreenID />
+		<EQType>134</EQType>
+		<Font>2</Font>
+		<RelativePosition>true</RelativePosition>
+		<Location>
+			<X>4</X>
+			<Y>34</Y>
+		</Location>
+		<Size>
+			<CX>116</CX>
+			<CY>16</CY>
+		</Size>
+		<Text />
+		<TextColor>
+			<R>255</R>
+			<G>255</G>
+			<B>255</B>
+		</TextColor>
+		<NoWrap>true</NoWrap>
+		<AlignCenter>false</AlignCenter>
+		<AlignRight>false</AlignRight>
+	</Label>	
+
+	<Screen item = "TargetWindow">
+		<ScreenID/>
+		<RelativePosition>false</RelativePosition>
+		<Location>
+			<X>516</X>
+			<Y>242</Y>
+		</Location>
+		<Size>
+			<CX>144</CX>
+			<CY>46</CY>
+		</Size>
+		<Text>TARGET</Text>
+		<Style_VScroll>false</Style_VScroll>
+		<Style_HScroll>false</Style_HScroll>
+		<Style_Transparent>false</Style_Transparent>
+		<TooltipReference>Your Current Target</TooltipReference>
+		<DrawTemplate>WDT_RoundedNoTitle</DrawTemplate>
+		<Style_Titlebar>false</Style_Titlebar>
+		<Style_Closebox>false</Style_Closebox>
+		<Style_Minimizebox>false</Style_Minimizebox>
+		<Style_Border>true</Style_Border>
+		<Style_Sizable>false</Style_Sizable>
+		<Pieces>Target_HP2</Pieces>
+		<Pieces>Target_HPLabel</Pieces>
+		<Pieces>Target_HPPercLabel</Pieces>
+		<Pieces>Target_Casting_Gauge</Pieces>
+<!-- 		<Pieces>Target_Casting_SpellName</Pieces> -->
+		<Pieces>A_TargetBoxStaticAnim</Pieces>
+	</Screen>
+
+</XML>

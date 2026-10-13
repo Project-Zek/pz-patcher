@@ -1,0 +1,156 @@
+[Old World]
+// Antonica
+Befallen			-82	+35	West Commons Zoneline
+Beholder's Maze			-512	-31	Right at zone to East Karana
+Black Burrow			-159	+39	Right next to Qeynos Hills zone
+Cazic Thule			+66	-75	Right at zone
+East Commonlands		+8	+4947	Near West Commons zone, in sight of Inn
+Eastern Karana			+15	+865	On Wooden Bridge (zone to North Karana)
+Erud's Crossing			-1767	+795	At the dock to Kerra Isle
+Everfrost Peaks			+3139	+629	Outside cave near Halas zone
+Feerrott			+1051	+905	Near a hut a ways outside of Ogguk 
+Freeport (East)			-14	-950	On the dock
+Freeport (North)		-296	+211	Near East Freeport zone point, South of jewlery shop
+Freeport (West)			+335	+181	Just outside town in newbie area
+Grobb				-100	+0	Near the zone to Innothule
+Halas				+0	+0	In front of Halas sign  
+Highpass Keep			-16	+88	At the zone to Highpass Hold
+Highpass Hold			+164	+74	In the middle of nowhere in the maze
+Innothule Swamp			-2192	-588	Not far from Grobb, on shore of swamp
+Kithicor Forest			+1889	+3828	At zone to Rivervale
+Lake Rathetear			+4183	+1213	Near South Karana zone
+Lavastorm Mountains		-1833	+154	At zone to Nektulos Forest
+Lower Guk			+1197	-217	Right at zone to Upper Guk
+Misty Thicket			+0	+0	At the wall
+Nagafen's Lair			-424	-263	At zone to Lavastorm
+Najena				-76	+858	At zone to Lavastorm
+Nektulos Forest			-1201	-259	Near the bridge close to the West Commonlands zone
+Neriak Foreign Quarter		-3	+157	At zone to Nektulos Forest
+Neriak Commons			+3	-500	Near zone to Neriak A overlooking the PoD
+Neriak Third Gate		+892	-969	In second cavern near the waterfall / hovering eye
+Northern Desert of Ro		+3538	+299	Near Inn by the East Freeport zone
+Northern Karana			-284	-382	North of Gypsies at Mile Stone
+Oasis of Marr			+450	+904	North of Oasis, in sight of spectre tower
+Ocean of Tears			+390	-9200	At dock on Sisters Isle
+Ogguk				-345	-99	At zone to Feerrott
+Permafrost			+0	+0	In the maze, closest to zone to Everfrost
+Qeynos (North)			+428	-74	Near entrance to Qeynos, along wall to left
+Qeynos (South)			-10	+0	On docks near boat docking pier
+Qeynos Aqueducts		+860	+80	At Bait Masterson NPC, middle of the maze
+Qeynos Hills			+508	+83	At Crossroads Marker
+Rathe Mountains			+3825	+1831	In middle of zone on hill next to the cyclops hill
+Rivervale			+0	+0	Close to PoD, at tunnel to zone to Misty Thicket
+Runnyeye			+90	+201	Misty Thicket Zone Line
+Solusek's Eye			-476	-486	At the zone to Lavastorm
+Southern Desert of Ro		+1265	+286	Near zone to Oasis
+Southern Karana			+2348	+1294	On river shoreline slightly west of stone bridge
+Splitpaw Lair			-122	+63	At zone to South Karana
+Surefall Glades			+0	+0	In middle of zone next to Ranger guild
+The Temple of Solusek Ro	+262	+36	At zone to Lavastorm
+Upper Guk			-36	+7	At zone to Innothule Swamp
+West Commonlands		+214	-1334	Southeast of Tollbooth, near East Commons zone
+Western Karana			+15	-531	Near the zone to Qeynos Hills
+// Faydwer
+Ak'Anon				+47	-35	Near zone to Steamfont
+Butcherblock Mountains		+2550	-700	Near Kaladim Gates
+Crushbone			-644	+158	Near zone to Greater Faydark
+Dagnor's Cauldron		+2815	+320	Near zone to Butcherblock Mountains
+Felwithe (North)		-25	+94	Near tunnel to Greater Faydark zone
+Felwithe (South)		+320	-790	Near North Felwithe zone
+Greater Faydark			-20	+10	Between the two lifts to Kelethin.
+Kaladim (North)			-18	-2	A ways into the zone, near the tower
+Kaladim (South)			+494	+300	Near zone to Butcherblock Mountains
+Kedge Keep			Unknown		At the Zone line
+Lesser Faydark			-108	-1770	To the North of the Shadowmen
+Mistmoore Castle		-330	+120	Near zone to Lesser Faydark
+Ocean of Tears			Unknown		Base of dock on the Sister Isle
+Steamfont Mountains		+160	-273	Little hill Northwest of windmills
+Unrest				-38	+52	Near zone to Dagnor's Cauldron
+// Odus
+Erudin Palace			+712	+808	At the zone in
+Erud's Crossing			-1767	+795	Next to the dock to Kerra Isle
+The Hole			+640	-1050	Entrance to the zone
+Kerra Island			+475	-860	At zone to Tox Forest
+Paineel				+800	+200
+Stonebrunt Mountains		-3428	-1643
+The Warrens			+748	-930	Paineel Zone Line
+Toxxulia Forest			+2295	+203	Entrance to Erudin
+// Planes
+Plane of Fear			Unknown		No longer works
+Plane of Hate			Unknown		No longer works
+Plane of Sky			Unknown		No longer works
+
+[Kunark]
+Burning Woods			-4942	-821	Just North of Dreadlands zone
+Cabilis (East)			+1362	-417	Zone to Field of Bone
+Cabilis (West)			Unknown
+City of Mist			+28	-734	At end of Bridge just inside zone
+Dalnir				Unknown
+The Dreadlands			+2806	+9565	A short distance from the wizards spires
+The Emerald Jungle		-1223	+4648	Near zone to Field of Bone
+The Field of Bone		-1684	+1617	Near pit, at end of path leading from Cabilis East
+Fironia Vie			-2392	+1440	Near entrance to town a little way from the Bridge
+Frontier Mountains		-633	-4262	Near Lake of Ill Omen zone
+Howling Stones			Unknown		At zone in under the little pagoda/gazebo structure
+Kaesora				+370	+40	Just inside zone from Field of Bone
+Karnor's Castle			+0	+0	Center between Left and Right Zone Outs
+Kurn's Tower			+0	+0	Center of main room; just north of zone entrance
+Lake of Ill Omen		+5747	-5383	On a small hill just outside entrance to Cabilis West
+Mines of Nurga			-2200	-1762	Zone line from Frontier Mountains
+Old Sebilis			Unknown		Right hand side of zone-in
+The Overthere			-241	-4263	East of Frontier Mountain Zone
+Timourous Deep			-5392	+2194	Just North of the chessboard
+Trakanon's Teeth		+3868	+1486	At zone line to Emerald Jungle
+Skyfire Mountains		-1140	-4286	At the zone to the Overthere
+Swamp of No Hope		+2761	+2945	A bit outside Cabilis
+Temple of Droga			+1375	+290	At the zone in from Frontier Mountains
+Veeshan's Peak			Unknown		At the same zone in point as if you use the door
+Veksar				Unknown		Doesn't exist
+Warslik's Woods			-1429	-468	Near the Cablis Zone
+
+[Velious]
+Cobalt Scar			-939	+895	The raised pagoda at start of ramp to Shyshrine entrance
+Crystal Caverns			+487	+303	At zone to East Wastes
+Eastern Wastes			-5049	-4296	Near zone to Iceclad
+Great Divide			-7720	-965	Middle of nowhere
+Iceclad Ocean			+5330	+340	On the docks
+Icewell Keep			+250	+0	At the zone to Thurgadin
+Kael Drakkal			-47	-633	At the zone to Eastern Wastes
+Plane of Growth			Unknown
+Plane of Mischief		-1400	-395	Zone in from ToV
+Siren's Grotto			+196	-33	Western Wastes Zone Line
+SkyShrine			-210	-730	At the zone to Wakening Lands
+Temple of Veeshan		-2086	-499	The empty room you zone into from Western Wastes
+Thurgadin			-1222	+0	At the zone to Great Divide
+Tower of Frozen Shadow		+120	+200	At the zone to Iceclad
+Velketor's Labrynth		+581	-65	At the zone to Great Divide
+Wakening Lands			-673	-5000	At the zone to Kael Drakkal
+Western Wastes			-4099	-3499	Just outside the cave that zones into Sirens Grotto
+
+[Luclin]
+Acrylia Caverns			+20	-665	At zone to Grimling Forest
+Akheva Ruins			Unknown		At the zone in
+Dawnshroud Peaks		+0	+2085	At the zone to Sanctus Seru Seru guards nearby
+Echo Caverns			+840	-850	Near the secret entrance to Shadow Haven
+Fungus Grove			-2140	-1005	At the zone to Echo Caverns
+Grieg's End			-19	+3461	At the zone to Dawnshroud Peaks
+Grimling Forest			-950	-1020	Vah Shir outpose at east side of zone
+Hollowshade Moor		+1241	+2420	Down hill from entrance to Shar Vahl
+Katta Castlellum		+645	-545	At the zone to Tenebrous Mountains Katta guards nearby
+Maiden's Eye			+940	+1905	In tunnel to Dawnshroud Peaks Zoneline
+Marus Seru			+540	-1668	In Building
+Mons Letalis			-1249	-623	At mouth of tunnel to Marus Seru zone
+Netherbian Lair			+1787	+14	At the zone to The Nexus
+Paludal Caverns			-3721	+241	At the zone to Shadeweaver's Thicket
+Sanctus Seru			+1166	-232	Near zone to Dawnshroud Peak
+Scarlet Desert			-1054	-1678	At the zone to Twilight Sea
+Shadeweaver's Thicket		-2122	-3570	At the zone to Shar Vahl
+Shadowhaven			-982	+190	Just north of Paludal Caverns zone
+Shar Vahl			-1135	+85	Shadeweavers Zone
+The Bazaar			-821	-172	Outside stairs to Shadowhaven
+The Deep			-398	-700	At the zone to Echo Caverns
+The Grey			-1994	+349	At the zone to Mons Letalis
+The Nexus			+3	+12	Zone in from Nexus Port
+The Tenebrous Mountains		+50	+1809	At the zone in from Katta Castellum
+Twilight Sea			-420	-1858	On shore behind the docks near Katta
+Umbral Plains			-474	+1900	Near entrance to Umbral Plains

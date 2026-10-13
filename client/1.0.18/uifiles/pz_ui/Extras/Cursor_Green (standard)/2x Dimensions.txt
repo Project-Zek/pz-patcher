@@ -1,0 +1,44 @@
+X & Y Information for 2x
+
+_____Format_____
+Window Item Name
+Texture: Custom tga file Name
+Location: x y
+Size: x y
+HotSpot: x y
+
+A_DefaultCursor
+Custom_Cursor.tga
+Location: 0 0
+Size: 44 44
+HotSpot: 10 2
+
+A_CursorResizeEW
+Custom_Cursor_Resize_EW.tga
+Location: 0 0
+Size: 44 44
+HotSpot: 22 22
+
+A_CursorResizeNESW
+Custom_Cursor_Resize_NESW.tga
+Location: 0 0
+Size: 44 44
+HotSpot: 22 22
+
+A_CursorResizeNS
+Custom_Cursor_Resize_NS.tga
+Location: 0 0
+Size: 44 44
+HotSpot: 22 22
+
+A_CursorResizeNWSE
+Custom_Cursor_Resize_NWSE.tga
+Location: 0 0
+Size: 44 44
+HotSpot: 22 22
+
+A_CursorDrag
+Custom_Cursor_Drag.tga
+Location: 0 0
+Size: 44 44
+HotSpot: 22 22

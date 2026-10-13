@@ -1,0 +1,45 @@
+[Cobalt Scar]
+Skyshrine				-701	+888
+Siren's Grotto				+1200	+1600	Underwater
+Othmir Camp				-800	-420
+Portal					-1047	-1573
+
+[Dragon Necropolis]
+Western Wastes				-80	+1980
+Chetari Caves				+190	-1400
+Jaled Dar's Shade Building		+1480	-120
+
+[Eastern Wastes]
+Great Divide				-1700	+6600
+Iceclad Ocean (Bridge)			-4500	-4500
+Kael					-6380	+7000
+Coldain Warrior Camp			-2600	-390
+Ry'Gorr Orc Fort			-3740	+360
+Sleeper's Tomb				-7250	+0
+Crystal Caverns				-4300	+500
+
+[Great Divide]
+Eastern Wastes				-1800	-5100
+Velketors				-6750	+3150
+Thurgadin				-30	-100
+Giant Fort				-2700	-2500
+Portal					-3700	+3600
+Nexus Spire				-1950	-2700
+
+[Iceclad Ocean]
+Eastern Wastes				-4600	+9050
+Tower of Frozen Shadows			+1700	+2800
+Docks to/from N. Ro			+4000	-19300
+Gnome Outpost				+4600	+1300
+Portal					-600	+4900
+
+[Wakening Lands]
+Kael					-550	-5050
+Plane of Growth				+600	-1000
+Skyshrine				+1450	+4500
+Portal					-3000	-3000	Woushi
+
+[Western Wastes]
+Temple of Veeshan			+1400	+700
+Siren's Grotto				-5150	-3800
+Dragon Necropolis			-2860	+400

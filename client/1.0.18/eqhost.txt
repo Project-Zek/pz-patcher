@@ -1,0 +1,8 @@
+[Registration Servers]
+{
+"server.project-zek.com:6999"
+}
+[Login Servers]
+{
+"server.project-zek.com:6000"
+}
