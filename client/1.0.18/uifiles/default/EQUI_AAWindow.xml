@@ -6,11 +6,11 @@
 		<!--<Font>3</Font>-->
 		<RelativePosition>true</RelativePosition>
 		<Location>
-			<X>500</X>
+			<X>525</X>
 			<Y>200</Y>
 		</Location>
 		<Size>
-			<CX>100</CX>
+			<CX>50</CX>
 			<CY>24</CY>
 		</Size>
 		<Style_Transparent>false</Style_Transparent>
@@ -37,11 +37,11 @@
 		<!--<Font>3</Font>-->
 		<RelativePosition>true</RelativePosition>
 		<Location>
-			<X>500</X>
+			<X>525</X>
 			<Y>236</Y>
 		</Location>
 		<Size>
-			<CX>100</CX>
+			<CX>50</CX>
 			<CY>24</CY>
 		</Size>
 		<Style_Transparent>false</Style_Transparent>
@@ -68,11 +68,11 @@
 		<!--<Font>3</Font>-->
 		<RelativePosition>true</RelativePosition>
 		<Location>
-			<X>500</X>
+			<X>525</X>
 			<Y>272</Y>
 		</Location>
 		<Size>
-			<CX>100</CX>
+			<CX>50</CX>
 			<CY>24</CY>
 		</Size>
 		<Style_Transparent>false</Style_Transparent>
@@ -369,7 +369,16 @@
 	<Listbox item = "AAW_GeneralList">
 		<ScreenID>List1</ScreenID>
 		<DrawTemplate>WDT_Inner</DrawTemplate>
-		<AutoStretch>true</AutoStretch>
+		<RelativePosition>true</RelativePosition>
+		<AutoStretch>false</AutoStretch>
+		<Location>
+			<X>4</X>
+			<Y>0</Y>
+		</Location>
+		<Size>
+			<CX>480</CX>
+			<CY>320</CY>
+		</Size>
 		<TopAnchorToTop>true</TopAnchorToTop>
 		<BottomAnchorToTop>false</BottomAnchorToTop>
 		<LeftAnchorToLeft>true</LeftAnchorToLeft>
@@ -399,7 +408,7 @@
 
 		<Style_VScroll>false</Style_VScroll>
 		<Style_HScroll>false</Style_HScroll>
-		<Style_Transparent>true</Style_Transparent>
+		<Style_Transparent>false</Style_Transparent>
 		<TooltipReference/>
 		<DrawTemplate>WDT_Def</DrawTemplate>
 		<TabText>General</TabText>
@@ -414,7 +423,6 @@
 				<B>0</B>
 		</TabTextActiveColor>
 		<Style_Sizable>true</Style_Sizable>
-			<Pieces>AAW_GeneralList</Pieces>
 
 	</Page>
 
@@ -450,7 +458,7 @@
 
 		<Style_VScroll>false</Style_VScroll>
 		<Style_HScroll>false</Style_HScroll>
-		<Style_Transparent>true</Style_Transparent>
+		<Style_Transparent>false</Style_Transparent>
 		<TooltipReference/>
 		<DrawTemplate>WDT_Def</DrawTemplate>
 		<TabText>Archetype</TabText>
@@ -501,7 +509,7 @@
 
 		<Style_VScroll>false</Style_VScroll>
 		<Style_HScroll>false</Style_HScroll>
-		<Style_Transparent>true</Style_Transparent>
+		<Style_Transparent>false</Style_Transparent>
 		<TooltipReference/>
 		<DrawTemplate>WDT_Def</DrawTemplate>
 		<TabText>Class</TabText>
@@ -552,7 +560,7 @@
 
 		<Style_VScroll>false</Style_VScroll>
 		<Style_HScroll>false</Style_HScroll>
-		<Style_Transparent>true</Style_Transparent>
+		<Style_Transparent>false</Style_Transparent>
 		<TooltipReference/>
 		<DrawTemplate>WDT_Def</DrawTemplate>
 		<TabText>PoP Advance</TabText>
@@ -603,7 +611,7 @@
 
 		<Style_VScroll>false</Style_VScroll>
 		<Style_HScroll>false</Style_HScroll>
-		<Style_Transparent>true</Style_Transparent>
+		<Style_Transparent>false</Style_Transparent>
 		<TooltipReference/>
 		<DrawTemplate>WDT_Def</DrawTemplate>
 		<TabText>PoP Ability</TabText>
@@ -626,12 +634,12 @@
 		<RelativePosition>true</RelativePosition>
 
 		<Location>
-			<X>4</X>
+			<X>0</X>
 			<Y>0</Y>
 		</Location>
 		<Size>
-			<CX>480</CX>
-			<CY>320</CY>
+			<CX>0</CX>
+			<CY>0</CY>
 		</Size>
 
 		<TabBorderTemplate>FT_DefTabBorder</TabBorderTemplate>
@@ -681,15 +689,15 @@
 		<Style_HScroll>false</Style_HScroll>
 		<Style_Transparent>false</Style_Transparent>
 		<!--<TooltipReference/>-->
-		<Text>AA Window</Text>
-<!-- 		<DrawTemplate>WDT_Def</DrawTemplate> -->
-		<DrawTemplate>WDT_RoundedNoTitle</DrawTemplate>
+		<Text>Alternate Advancement Window</Text>
+		<DrawTemplate>WDT_Def</DrawTemplate>
 		<Style_Titlebar>true</Style_Titlebar>
 		<Style_Closebox>true</Style_Closebox>
 		<Style_Minimizebox>true</Style_Minimizebox>
 		<Style_Border>true</Style_Border>
 		<Style_Sizable>false</Style_Sizable>
 		<Pieces>AAW_Subwindows</Pieces>
+		<Pieces>AAW_GeneralList</Pieces>
 		<Pieces>AAW_Description</Pieces>
 		<Pieces>AAW_TotalLabel</Pieces>
 		<Pieces>AAW_TotalCount</Pieces>

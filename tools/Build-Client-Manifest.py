@@ -1,7 +1,7 @@
 """Generate this patcher's MD5 manifest from a versioned client payload.
 
 Run from the repository root after adding all files to client/<snapshot>.
-Zeal and pz_ui skin folders are supported, including optional Extras; pz_ui backup files are excluded.
+Default, Zeal and pz_ui skin folders are supported, including optional Extras; pz_ui backup files are excluded.
 Music and player settings are intentionally excluded from this release channel.
 """
 import argparse
@@ -12,6 +12,9 @@ from pathlib import Path
 import re
 from urllib.parse import quote
 
+# Remove retired overrides from existing clients and exclude them from downloads.
+REMOVED_CLIENT_FILES = ("uifiles/pz_ui/EQUI_AAWindow.xml",)
+
 
 def build(root, snapshot, version):
     if not re.fullmatch(r"[A-Za-z0-9._-]{1,64}", snapshot) or snapshot in {".", ".."}:
@@ -21,6 +24,7 @@ def build(root, snapshot, version):
         raise ValueError("Missing ordinary client/" + snapshot + " folder.")
     rows = []
     names = set()
+    removed_names = {name.lower() for name in REMOVED_CLIENT_FILES}
     for path in sorted(payload.rglob("*"), key=lambda p: p.as_posix().lower()):
         if path.is_symlink():
             raise ValueError("Links are not allowed: " + str(path))
@@ -28,11 +32,13 @@ def build(root, snapshot, version):
             continue
         name = path.relative_to(payload).as_posix()
         lower = name.lower()
+        if lower in removed_names:
+            continue
         if lower.startswith("uifiles/pz_ui/") and ".bak" in path.name.lower():
             continue
         if path.suffix.lower() in {".mp3", ".wav", ".xmi", ".mid", ".midi", ".emt"}:
             raise ValueError("Music stays in the separate music pack: " + name)
-        if lower not in {"zeal.asi", "eqgame.dll", "eqw.dll", "d3d8.dll", "spells_en.txt", "eqstr_en.txt", "eqhost.txt"} and not lower.startswith(("uifiles/zeal/", "uifiles/pz_ui/")):
+        if lower not in {"zeal.asi", "eqgame.dll", "eqw.dll", "d3d8.dll", "spells_en.txt", "eqstr_en.txt", "eqhost.txt", "uifiles/default/equi_aawindow.xml"} and not lower.startswith(("uifiles/zeal/", "uifiles/pz_ui/")):
             raise ValueError("Unapproved release path (music/settings/base archives stay separate): " + name)
         if lower in names or any(part in {".", ".."} or part.endswith((".", " ")) for part in name.split("/")):
             raise ValueError("Duplicate or unsafe release path: " + name)
@@ -54,7 +60,9 @@ def build(root, snapshot, version):
     manifest = "version: " + json.dumps(version) + "\ndownloadprefix: " + prefix + "\ndownloads:\n"
     for row in rows:
         manifest += "- name: " + json.dumps(row["path"]) + "\n  md5: " + row["md5"] + "\n  date: \"" + stamp + "\"\n  size: " + str(row["bytes"]) + "\n"
-    manifest += "deletes: []\n"
+    manifest += "deletes:\n"
+    for name in REMOVED_CLIENT_FILES:
+        manifest += "- name: " + json.dumps(name) + "\n"
     return manifest, rows
 
 

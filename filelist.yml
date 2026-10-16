@@ -1,4 +1,4 @@
-version: "PZ-20261016-Client-1.0.18-CharacterSelectMessages1"
+version: "PZ-20261016-Client-1.0.18-DefaultAAWindow1"
 downloadprefix: https://raw.githubusercontent.com/Project-Zek/pz-patcher/main/client/1.0.18/
 downloads:
 - name: "D3D8.dll"
@@ -25,6 +25,10 @@ downloads:
   md5: 39b5918b0c983ddd3750b2128e6c1225
   date: "20261013"
   size: 1939466
+- name: "uifiles/default/EQUI_AAWindow.xml"
+  md5: efe343ef96e4a50b794a73a268a4d58c
+  date: "20261016"
+  size: 17299
 - name: "uifiles/pz_ui/arrow.cur"
   md5: d2ae6535fa644254b04e8dcdd29568a4
   date: "20261013"
@@ -257,10 +261,6 @@ downloads:
   md5: 8f6cc8e1f6a26d7364ee80c9ce057934
   date: "20261013"
   size: 262162
-- name: "uifiles/pz_ui/EQUI_AAWindow.xml"
-  md5: 8727fb8d66170f7733731dd65b81ed52
-  date: "20261013"
-  size: 17187
 - name: "uifiles/pz_ui/EQUI_ActionsWindow.xml"
   md5: 0e5371afa136e042bbbdf3f948dbb2eb
   date: "20261013"
@@ -1557,4 +1557,5 @@ downloads:
   md5: 3cac6efa4eda8fb04af59032816e9d1f
   date: "20261013"
   size: 8761856
-deletes: []
+deletes:
+- name: "uifiles/pz_ui/EQUI_AAWindow.xml"
