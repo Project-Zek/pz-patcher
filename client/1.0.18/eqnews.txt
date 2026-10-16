@@ -1,0 +1,295 @@
+October 16, 2026
+------------------------------
+
+Dear Project Zek players,
+
+Welcome to Project Zek! Below you will find our gameplay and client patch notes, with the most recent changes first.
+
+** Discord and Community **
+
+Discord: https://discord.gg/q7Gp3whxRH
+Website: https://www.project-zek.com/
+Patch archive: https://www.project-zek.com/news
+
+- Check the playguide channel on Discord for client downloads, patcher instructions, and help getting started.
+
+- Run the patcher from your EverQuest client folder to receive the latest client files before playing.
+
+- Report bugs and other issues in the buggreport channel on Discord. Please include what happened and how to reproduce it.
+
+- To link Discord, sign in to the website and open Account Settings > Discord > Link Discord.
+
+- Team voice access requires a character at level 6 or higher on your linked game account. Access follows that character's Good, Neutral, or Evil team and usually refreshes within a minute. Deleting the qualifying character or unlinking Discord removes access.
+
+Thank you for testing, reporting issues, and helping us improve the server.
+
+- The Project Zek Team
+
+
+
+October 13, 2026
+------------------------------
+
+** Client Stability **
+
+- Identified and fixed the cause of a client crash.
+
+- The fix is available through the patcher. Please patch again and report any remaining crashes on Discord.
+
+
+
+September 16, 2026
+------------------------------
+
+** Rogue Poisons **
+
+- Rogues may apply poison to daggers in both their main hand and off-hand.
+
+- Poison now has a 10% chance to trigger on a hit, rather than activating automatically on the first hit. Each application has one charge.
+
+- Applications remain active for 30 minutes and are retained when zoning.
+
+- Use /poisons to see your active poisons and the time remaining on each.
+
+- This system remains subject to testing. Proc chance, duration, and other values may be adjusted based on feedback.
+
+
+
+June 9, 2026
+------------------------------
+
+** Priest of Discord **
+
+- Repaired the Priest of Discord quest, including insignia hand-ins and corpse summoning.
+
+
+
+February 14, 2026
+------------------------------
+
+** Classes and Combat **
+
+- Corrected Paladin critical hits against undead and Ranger critical hits against animals.
+
+- Adjusted pet aggression against NPCs toward classic behavior.
+
+- Fixed an auto-attack issue involving illusions.
+
+- Rescaled melee reach and hitboxes. Please report problems found while testing.
+
+- Fixed bolt spell animations and added a custom variation.
+
+** Items and Loot **
+
+- Fixed a coin duplication problem with PvP coin looting.
+
+- Corrected coin updates when pickpocketing and added a notification.
+
+- Artifact items now support destruction on death.
+
+
+
+January 18, 2026
+------------------------------
+
+** Quests **
+
+- Updated interactive quest dialogue to use clickable SayLinks. Clicking a dialogue prompt should speak the appropriate response.
+
+- Please report broken links or incorrect quest responses in buggreport.
+
+
+
+January 12, 2026
+------------------------------
+
+** Server and Client **
+
+- Resolved a port conflict between static and dynamic zones that caused zone crashes.
+
+- Restored PvP statistics functionality.
+
+- Updated the client DLL to correct PvP range behavior. Run the patcher to receive it.
+
+** Spells and Combat **
+
+- Bolt spells should no longer display archery animations.
+
+- Corrected dispelling behavior.
+
+- Damage from a damage-over-time spell now interrupts mesmerization.
+
+** World and Communication **
+
+- Added channels for individual teams and updated quest SayLinks.
+
+- Entering a dungeon now requires level 5 or higher.
+
+
+
+January 10, 2026
+------------------------------
+
+** Client **
+
+- Distributed an updated EQW through the patcher to address client issues. Please continue reporting any problems.
+
+
+
+January 7, 2026
+------------------------------
+
+** World and NPCs **
+
+- Enabled Shadow Men and soulbinders.
+
+- Repaired the entrance to the Temple of Solusek Ro.
+
+- Restored the Ranger and Paladin guildmasters in Rivervale.
+
+- Restored the Shadow Knight and Paladin guildmasters in Ak'Anon.
+
+** Items **
+
+- Corrected how summoned stackable items combine on the cursor.
+
+** Combat and Discord **
+
+- Improved buff synchronization.
+
+- Rangers can critically hit animals from level 12; Paladins can critically hit undead from level 12.
+
+- Added Discord notifications for item discoveries.
+
+- Restricted the Discord OOC relay to characters at level 5 or higher.
+
+- Added a notification when a character reaches the level 5 PvP threshold.
+
+
+
+December 26, 2025
+------------------------------
+
+** Discord and PvP Messages **
+
+- Connected OOC and PvP kill announcements to Discord.
+
+- Added in-game yellow-text kill announcements.
+
+** Combat and Spells **
+
+- Warriors gain access to stun at level 5.
+
+- Reduced the overall NPC stun rate by 5%.
+
+- Added damage-over-time damage messages to the client.
+
+- Implemented an improved port system.
+
+
+
+October 23, 2025
+------------------------------
+
+** PvP and Classes **
+
+- Enabled Taunt in PvP.
+
+- Feign Death now causes enemies to lose their target.
+
+- Combining Rogue Sneak and Hide now gives the character the invisible-man appearance.
+
+- Corrected the maximum durations for Charm and Fear in PvP.
+
+- Fixed problems with looting insignias.
+
+** Appearance **
+
+- Enforced classic character models.
+
+- Removed nameplates while using skeleton illusions.
+
+
+
+August 21, 2025
+------------------------------
+
+** PvP Spells and Faction **
+
+- Corrected PvP-related faction adjustments in starting cities.
+
+- Implemented a working PvP resistance system with separate tuning for different spell types.
+
+- Dispelling a teammate now removes only detrimental effects.
+
+
+
+June 12, 2025
+------------------------------
+
+** Database **
+
+- Corrected several loot tables for the classic Temple of Cazic-Thule.
+
+- Added the classic Recfek Shralok spawn in Kithicor Forest.
+
+
+
+June 11, 2025
+------------------------------
+
+** Database **
+
+- Repaired Dragoon Zytl's pathing grid.
+
+- Corrected pathing for several halflings in Nektulos Forest and removed an unnecessary grid.
+
+- Applied expansion restrictions to merchant items from later eras.
+
+
+
+March 30, 2025
+------------------------------
+
+** Characters and Teams **
+
+- Set a maximum of three characters.
+
+- Implemented race and deity choices during character creation.
+
+- Added an account-level team restriction.
+
+** PvP **
+
+- Set the starting PvP level to 5.
+
+- Taking PvP damage now cancels Feign Death.
+
+- Enabled guard assistance in cities.
+
+- Implemented and expanded the PvP points system.
+
+- Added infamy penalties for attacking characters at least 10 levels below you.
+
+- Added combat tracking so a lower-level character who attacks a higher-level opponent, or assists through healing or buffs, can become a valid PvP target.
+
+** Discord **
+
+- Added team colors to the OOC relay and kill announcements sent to Discord.
+
+** World **
+
+- Added dazed_goblin_javelineer in Runnyeye.
+
+- Removed a Shadow Men spawn flag.
+
+- Corrected the appearance of classic skeletons.
+
+
+
+For the complete patch archive and current server information, visit:
+https://www.project-zek.com/news
+
+See you in Norrath!
+
+- The Project Zek Team

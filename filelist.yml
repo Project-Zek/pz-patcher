@@ -1,4 +1,4 @@
-version: "PZ-20261016-Client-1.0.18-DefaultAAWindow1"
+version: "PZ-20261016-Client-1.0.18-PatchNews1"
 downloadprefix: https://raw.githubusercontent.com/Project-Zek/pz-patcher/main/client/1.0.18/
 downloads:
 - name: "D3D8.dll"
@@ -13,6 +13,10 @@ downloads:
   md5: d15b17d6c840697dd7f10b0a0f5f93e7
   date: "20261013"
   size: 113
+- name: "eqnews.txt"
+  md5: 7cdffbb3aff3ccc371a9d89e4ab69638
+  date: "20261016"
+  size: 7513
 - name: "eqstr_en.txt"
   md5: 94242426a5d398373341361b1ecfaf47
   date: "20261016"
