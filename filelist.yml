@@ -1,4 +1,4 @@
-version: "PZ-20261013-Client-1.0.18-CrashFix-QuietLogin1"
+version: "PZ-20261016-Client-1.0.18-CharacterSelectMessages1"
 downloadprefix: https://raw.githubusercontent.com/Project-Zek/pz-patcher/main/client/1.0.18/
 downloads:
 - name: "D3D8.dll"
@@ -13,6 +13,10 @@ downloads:
   md5: d15b17d6c840697dd7f10b0a0f5f93e7
   date: "20261013"
   size: 113
+- name: "eqstr_en.txt"
+  md5: 94242426a5d398373341361b1ecfaf47
+  date: "20261016"
+  size: 263121
 - name: "eqw.dll"
   md5: ba5ecab4a8a182fd9b65d2f495b64ff8
   date: "20261013"

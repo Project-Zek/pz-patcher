@@ -32,7 +32,7 @@ def build(root, snapshot, version):
             continue
         if path.suffix.lower() in {".mp3", ".wav", ".xmi", ".mid", ".midi", ".emt"}:
             raise ValueError("Music stays in the separate music pack: " + name)
-        if lower not in {"zeal.asi", "eqgame.dll", "eqw.dll", "d3d8.dll", "spells_en.txt", "eqhost.txt"} and not lower.startswith(("uifiles/zeal/", "uifiles/pz_ui/")):
+        if lower not in {"zeal.asi", "eqgame.dll", "eqw.dll", "d3d8.dll", "spells_en.txt", "eqstr_en.txt", "eqhost.txt"} and not lower.startswith(("uifiles/zeal/", "uifiles/pz_ui/")):
             raise ValueError("Unapproved release path (music/settings/base archives stay separate): " + name)
         if lower in names or any(part in {".", ".."} or part.endswith((".", " ")) for part in name.split("/")):
             raise ValueError("Duplicate or unsafe release path: " + name)
