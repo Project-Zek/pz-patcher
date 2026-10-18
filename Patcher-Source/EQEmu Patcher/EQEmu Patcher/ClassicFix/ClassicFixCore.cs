@@ -219,9 +219,12 @@ namespace ProjectZekClassic {
                 if(spells) {
                     Require(File.Exists(Safe(root,"spells.eff")),"Classic spell effects are missing from this client.");
                     staged["spellsnew.edd"]=null;staged["spellsnew.eff"]=null;
+                }
+                if(spells||music) {
                     string ini=Safe(root,"eqclient.ini"),temp=Path.Combine(tx,"eqclient-stage.ini");
                     if(File.Exists(ini))File.Copy(ini,temp);else File.WriteAllText(temp,"[Defaults]\r\n",Encoding.Default);
-                    Require(WritePrivateProfileString("Defaults","ShowSpellEffects","1",temp),"Could not save classic spell-effect preferences.");
+                    if(spells)Require(WritePrivateProfileString("Defaults","ShowSpellEffects","1",temp),"Could not save classic spell-effect preferences.");
+                    if(music)Require(WritePrivateProfileString("Options","ClassicMusic","TRUE",temp),"Could not enable client classic music.");
                     staged["eqclient.ini"]=File.ReadAllBytes(temp);File.Delete(temp);
                 }
                 if(music)foreach(var file in MusicDefinitionAssets.Stage(root))staged.Add(file.Key,file.Value);
@@ -254,7 +257,7 @@ namespace ProjectZekClassic {
                         Install(root,tx,change.name,change.after!=null?"after":null);
                     }
                     journal.phase="complete";Save(Path.Combine(tx,"journal.json"),journal);Save(Safe(root,"ClassicFix/latest.json"),journal);File.Delete(marker);
-                    return "Applied "+journal.changes.Count+" changes. Your originals are saved for Restore."+(music?" Music definitions and Zeal settings are updated; audio files are obtained separately.":"");
+                    return "Applied "+journal.changes.Count+" changes. Your originals are saved for Restore."+(music?" Classic music is enabled in the client and Zeal; zone definitions are updated. Audio files are obtained separately.":"");
                 } catch {
                     bool rolledBack=true;
                     foreach(var change in journal.changes.AsEnumerable().Reverse())try{Install(root,tx,change.name,change.existed?"before":null);}catch{rolledBack=false;}

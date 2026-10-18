@@ -4,6 +4,8 @@ The patcher downloads and repairs the client files listed in the current MD5 man
 
 App.config points to the current Project-Zek/pz-patcher manifest. Publish the manifest and all referenced files before distributing the configured patcher. See the repository's HOSTING.md for the upload order and future updates. The separate music pack is optional for Play.
 
+Applying Classic music saves `ClassicMusic=TRUE` under `[Options]` in `eqclient.ini`, and enables `ClassicMusic` and `ClassicMenuMusic` under `[Zeal]` in `zeal.ini`. Players do not need to enable the Zeal music option in game. Other preferences are preserved, and Restore returns both files to their previous state. Selecting music and spell effects together saves both sets of preferences.
+
 Build an online executable with VS2022 and .NET Framework 4.8 tools:
 
     .\Build-Patcher.ps1 -Online -ManifestUrl "https://raw.githubusercontent.com/Project-Zek/pz-patcher/main/filelist.yml"

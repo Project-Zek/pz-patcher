@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using System.Security.Cryptography;
 using System.Text;
+using System.Runtime.InteropServices;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
@@ -28,6 +29,11 @@ class MusicPackCompatibilityTests {
     static string Md5(string path) {using(var m=MD5.Create())return BitConverter.ToString(m.ComputeHash(File.ReadAllBytes(path))).Replace("-","").ToLowerInvariant();}
     static string Row(string name,string hash,long size) {return "- name: \""+name+"\"\n  md5: "+hash+"\n  size: "+size+"\n  date: \"20261011\"\n";}
     static string FileRow(string name) {string file=Path.Combine(root,name);return Row(name,Md5(file),new FileInfo(file).Length);}
+    [DllImport("kernel32.dll",CharSet=CharSet.Unicode)]
+    static extern uint GetPrivateProfileString(string section,string key,string fallback,StringBuilder value,uint size,string file);
+    static string Preference(string section,string key) {
+        var value=new StringBuilder(128);GetPrivateProfileString(section,key,"MISSING",value,(uint)value.Capacity,Path.Combine(root,"eqclient.ini"));return value.ToString();
+    }
     [STAThread] static int Main(string[] args) {try {
         assembly=Assembly.LoadFrom(args[0]);assets=assembly.GetType("ProjectZekClassic.MusicDefinitionAssets",true);root=args[1];
         if(args.Length>2&&args[2]=="--expect-old-rejection") {Reject(()=>Stage(),"music/pvp_quake_neutral.mp3");Console.WriteLine("PASS\tOriginal patcher reproduces the updated-neutral/old-catalog rejection");return 0;}
@@ -52,7 +58,7 @@ class MusicPackCompatibilityTests {
         });
         Test("All staged definitions remain the original tuned EMT bytes",()=>{foreach(var row in Stage())Check(row.Value.SequenceEqual(File.ReadAllBytes(Path.Combine(root,row.Key))),row.Key+" changed");});
         foreach(string name in new[]{"eqgame.exe","eqmain.dll","eqgfx_dx8.dll","mss32.dll","eqw.dll","D3D8.dll","Zeal.asi","eqgame.dll"})File.WriteAllText(Path.Combine(root,name),"PRIVATE-FIXTURE-NOT-EXECUTABLE");
-        File.WriteAllText(Path.Combine(root,"eqclient.ini"),"[Defaults]\r\nSound=TRUE\r\n");
+        File.WriteAllText(Path.Combine(root,"eqclient.ini"),"[Defaults]\r\nSound=TRUE\r\nShowSpellEffects=0\r\n[Options]\r\nClassicMusic=FALSE\r\nMaxFPS=144\r\n[Personal]\r\nSetting=KeepMe\r\n");
         File.WriteAllText(Path.Combine(root,"zeal.ini"),"[Zeal]\r\nFPS=120\r\nPersonalSetting=KeepMe\r\n");
         var catalog=new JavaScriptSerializer().DeserializeObject(File.ReadAllText(Path.Combine(root,"LaunchSupport/classic-music-definitions.json"))) as Dictionary<string,object>;
         var text=new StringBuilder("version: legacy-music-catalog\ndownloadprefix: https://example.invalid/\ndownloads:\n"+FileRow("Zeal.asi")+FileRow("eqgame.dll"));
@@ -81,15 +87,44 @@ class MusicPackCompatibilityTests {
             try{Verify();}finally{File.WriteAllText(path,manifest);}
         });
         byte[] originalIni=File.ReadAllBytes(Path.Combine(root,"zeal.ini"));
+        byte[] originalClientIni=File.ReadAllBytes(Path.Combine(root,"eqclient.ini"));
         Test("Classic music Apply enables character-creation and world music with updated PvP",()=>{
             Call(core,"ApplyWithMusic",null,root,false,false,false,false,false,true,false);
             string ini=File.ReadAllText(Path.Combine(root,"zeal.ini"));Check(ini.Contains("ClassicMusic=TRUE")&&ini.Contains("ClassicMenuMusic=TRUE")&&ini.Contains("FPS=120")&&ini.Contains("PersonalSetting=KeepMe"),"Music/menu preferences incorrect");
+            Check(Preference("Options","ClassicMusic")=="TRUE","Client [Options] ClassicMusic was not enabled");
+            Check(Preference("Options","MaxFPS")=="144"&&Preference("Defaults","Sound")=="TRUE"&&Preference("Personal","Setting")=="KeepMe"&&Preference("Defaults","ShowSpellEffects")=="0","Other client preferences changed");
+        });
+        Test("Repeated music Apply leaves the original Restore backup available",()=>{
+            Check(((string)Call(core,"ApplyWithMusic",null,root,false,false,false,false,false,true,false)).Contains("already applied"),"Music Apply is not idempotent");
         });
         Test("Reopening Classic fixes keeps Classic music selected",()=>{
             using(var form=(Form)Activator.CreateInstance(assembly.GetType("ProjectZekClassic.ClassicFixForm",true),root))Check(form.Controls.OfType<CheckBox>().Single(x=>x.Text.StartsWith("Classic music")).Checked,"Music state not remembered");
         });
         Test("Restore preserves the original preferences after the music update",()=>{
             Call(core,"Restore",null,root);Check(File.ReadAllBytes(Path.Combine(root,"zeal.ini")).SequenceEqual(originalIni),"Preferences not restored");Verify();
+            Check(File.ReadAllBytes(Path.Combine(root,"eqclient.ini")).SequenceEqual(originalClientIni),"Client preferences not restored exactly");
+        });
+        Test("Selecting spells and music together preserves both changes in eqclient.ini",()=>{
+            File.WriteAllText(Path.Combine(root,"spells.eff"),"PRIVATE-FIXTURE");
+            File.WriteAllText(Path.Combine(root,"spellsnew.edd"),"ORIGINAL-EDD");File.WriteAllText(Path.Combine(root,"spellsnew.eff"),"ORIGINAL-EFF");
+            Call(core,"ApplyWithMusic",null,root,false,true,false,false,false,true,false);
+            Check(Preference("Options","ClassicMusic")=="TRUE"&&Preference("Defaults","ShowSpellEffects")=="1"&&Preference("Options","MaxFPS")=="144","Combined preferences incorrect");
+            Call(core,"Restore",null,root);
+            Check(File.ReadAllBytes(Path.Combine(root,"eqclient.ini")).SequenceEqual(originalClientIni)&&File.ReadAllText(Path.Combine(root,"spellsnew.edd"))=="ORIGINAL-EDD"&&File.ReadAllText(Path.Combine(root,"spellsnew.eff"))=="ORIGINAL-EFF","Combined Restore differs");
+        });
+        Test("Applying another fix with music unchecked preserves client music settings",()=>{
+            Call(core,"ApplyWithMusic",null,root,false,true,false,false,false,false,false);
+            Check(Preference("Options","ClassicMusic")=="FALSE","Unchecked music was enabled");
+            Check(File.ReadAllBytes(Path.Combine(root,"zeal.ini")).SequenceEqual(originalIni),"Unchecked music changed Zeal");
+            Call(core,"Restore",null,root);Check(File.ReadAllBytes(Path.Combine(root,"eqclient.ini")).SequenceEqual(originalClientIni),"Spell-only Restore differs");
+        });
+        Test("Missing client and Zeal INIs are created with enabled music and removed by Restore",()=>{
+            string clientIni=Path.Combine(root,"eqclient.ini"),zealIni=Path.Combine(root,"zeal.ini");File.Delete(clientIni);File.Delete(zealIni);
+            try {
+                Call(core,"ApplyWithMusic",null,root,false,false,false,false,false,true,false);
+                Check(Preference("Options","ClassicMusic")=="TRUE"&&File.ReadAllText(zealIni).Contains("ClassicMusic=TRUE"),"Fresh INIs did not enable music");
+                Call(core,"Restore",null,root);Check(!File.Exists(clientIni)&&!File.Exists(zealIni),"Restore retained newly created INIs");
+            }finally{File.WriteAllBytes(clientIni,originalClientIni);File.WriteAllBytes(zealIni,originalIni);}
         });
         Console.WriteLine("No game, server event or elevation started.");return failed==0?0:1;
     }catch(Exception e){Console.Error.WriteLine(e);return 1;}}
