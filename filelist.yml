@@ -1,5 +1,5 @@
-version: "PZ-20261016-Client-1.0.18-PatchNews1"
-downloadprefix: https://raw.githubusercontent.com/Project-Zek/pz-patcher/main/client/1.0.18/
+version: "PZ-20261106-Client-1.0.19-Spells1"
+downloadprefix: https://raw.githubusercontent.com/Project-Zek/pz-patcher/main/client/1.0.19/
 downloads:
 - name: "D3D8.dll"
   md5: e215a1eef240ba696331f38841234580
@@ -26,8 +26,8 @@ downloads:
   date: "20261013"
   size: 84992
 - name: "spells_en.txt"
-  md5: 39b5918b0c983ddd3750b2128e6c1225
-  date: "20261013"
+  md5: 799037070ced077e9c17d57a59704c61
+  date: "20261106"
   size: 1939466
 - name: "uifiles/default/EQUI_AAWindow.xml"
   md5: efe343ef96e4a50b794a73a268a4d58c

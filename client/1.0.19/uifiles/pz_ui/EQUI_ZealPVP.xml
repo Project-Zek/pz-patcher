@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<XML ID="EQInterfaceDefinitionLanguage">
+  <Schema xmlns="EverQuestData" xmlns:dt="EverQuestDataTypes" />
+
+  <Label item="Zeal_PVP_Header">
+    <ScreenID>Zeal_PVP_Header</ScreenID>
+    <Font>3</Font>
+    <Text>Project Zek War Ledger</Text>
+    <TextColor>
+      <R>225</R>
+      <G>190</G>
+      <B>92</B>
+    </TextColor>
+    <Size><CX>600</CX><CY>24</CY></Size>
+    <AlignCenter>true</AlignCenter>
+    <RelativePosition>true</RelativePosition>
+    <AutoStretch>true</AutoStretch>
+    <TopAnchorToTop>true</TopAnchorToTop>
+    <LeftAnchorToLeft>true</LeftAnchorToLeft>
+    <RightAnchorToLeft>false</RightAnchorToLeft>
+    <BottomAnchorToTop>false</BottomAnchorToTop>
+    <TopAnchorOffset>7</TopAnchorOffset>
+    <LeftAnchorOffset>10</LeftAnchorOffset>
+    <RightAnchorOffset>10</RightAnchorOffset>
+  </Label>
+
+  <Button item="Zeal_PVP_Overview">
+    <ScreenID>Zeal_PVP_Overview</ScreenID>
+    <RelativePosition>true</RelativePosition>
+    <Location><X>8</X><Y>36</Y></Location>
+    <Size><CX>92</CX><CY>22</CY></Size>
+    <Text>Overview</Text>
+    <TextColor><R>225</R><G>225</G><B>210</B></TextColor>
+    <ButtonDrawTemplate><Normal>A_BtnNormal</Normal><Pressed>A_BtnPressed</Pressed><Flyby>A_BtnFlyby</Flyby><Disabled>A_BtnDisabled</Disabled><PressedFlyby>A_BtnPressedFlyby</PressedFlyby></ButtonDrawTemplate>
+  </Button>
+
+  <Button item="Zeal_PVP_Points">
+    <ScreenID>Zeal_PVP_Points</ScreenID>
+    <RelativePosition>true</RelativePosition>
+    <Location><X>104</X><Y>36</Y></Location>
+    <Size><CX>78</CX><CY>22</CY></Size>
+    <Text>Points</Text>
+    <TextColor><R>225</R><G>225</G><B>210</B></TextColor>
+    <ButtonDrawTemplate><Normal>A_BtnNormal</Normal><Pressed>A_BtnPressed</Pressed><Flyby>A_BtnFlyby</Flyby><Disabled>A_BtnDisabled</Disabled><PressedFlyby>A_BtnPressedFlyby</PressedFlyby></ButtonDrawTemplate>
+  </Button>
+
+  <Button item="Zeal_PVP_Kills">
+    <ScreenID>Zeal_PVP_Kills</ScreenID>
+    <RelativePosition>true</RelativePosition>
+    <Location><X>186</X><Y>36</Y></Location>
+    <Size><CX>72</CX><CY>22</CY></Size>
+    <Text>Kills</Text>
+    <TextColor><R>225</R><G>225</G><B>210</B></TextColor>
+    <ButtonDrawTemplate><Normal>A_BtnNormal</Normal><Pressed>A_BtnPressed</Pressed><Flyby>A_BtnFlyby</Flyby><Disabled>A_BtnDisabled</Disabled><PressedFlyby>A_BtnPressedFlyby</PressedFlyby></ButtonDrawTemplate>
+  </Button>
+
+  <Button item="Zeal_PVP_Guilds">
+    <ScreenID>Zeal_PVP_Guilds</ScreenID>
+    <RelativePosition>true</RelativePosition>
+    <Location><X>262</X><Y>36</Y></Location>
+    <Size><CX>76</CX><CY>22</CY></Size>
+    <Text>Guilds</Text>
+    <TextColor><R>225</R><G>225</G><B>210</B></TextColor>
+    <ButtonDrawTemplate><Normal>A_BtnNormal</Normal><Pressed>A_BtnPressed</Pressed><Flyby>A_BtnFlyby</Flyby><Disabled>A_BtnDisabled</Disabled><PressedFlyby>A_BtnPressedFlyby</PressedFlyby></ButtonDrawTemplate>
+  </Button>
+
+  <Button item="Zeal_PVP_Teams">
+    <ScreenID>Zeal_PVP_Teams</ScreenID>
+    <RelativePosition>true</RelativePosition>
+    <Location><X>342</X><Y>36</Y></Location>
+    <Size><CX>76</CX><CY>22</CY></Size>
+    <Text>Teams</Text>
+    <TextColor><R>225</R><G>225</G><B>210</B></TextColor>
+    <ButtonDrawTemplate><Normal>A_BtnNormal</Normal><Pressed>A_BtnPressed</Pressed><Flyby>A_BtnFlyby</Flyby><Disabled>A_BtnDisabled</Disabled><PressedFlyby>A_BtnPressedFlyby</PressedFlyby></ButtonDrawTemplate>
+  </Button>
+
+  <Button item="Zeal_PVP_Info">
+    <ScreenID>Zeal_PVP_Info</ScreenID>
+    <RelativePosition>true</RelativePosition>
+    <Location><X>422</X><Y>36</Y></Location>
+    <Size><CX>66</CX><CY>22</CY></Size>
+    <Text>Info</Text>
+    <TextColor><R>225</R><G>225</G><B>210</B></TextColor>
+    <ButtonDrawTemplate><Normal>A_BtnNormal</Normal><Pressed>A_BtnPressed</Pressed><Flyby>A_BtnFlyby</Flyby><Disabled>A_BtnDisabled</Disabled><PressedFlyby>A_BtnPressedFlyby</PressedFlyby></ButtonDrawTemplate>
+  </Button>
+
+  <Button item="Zeal_PVP_Refresh">
+    <ScreenID>Zeal_PVP_Refresh</ScreenID>
+    <RelativePosition>true</RelativePosition>
+    <Location><X>492</X><Y>36</Y></Location>
+    <Size><CX>108</CX><CY>22</CY></Size>
+    <Text>Refresh</Text>
+    <TextColor><R>225</R><G>225</G><B>210</B></TextColor>
+    <ButtonDrawTemplate><Normal>A_BtnNormal</Normal><Pressed>A_BtnPressed</Pressed><Flyby>A_BtnFlyby</Flyby><Disabled>A_BtnDisabled</Disabled><PressedFlyby>A_BtnPressedFlyby</PressedFlyby></ButtonDrawTemplate>
+  </Button>
+
+  <Listbox item="Zeal_PVP_List">
+    <ScreenID>Zeal_PVP_List</ScreenID>
+    <DrawTemplate>WDT_Inner</DrawTemplate>
+    <RelativePosition>true</RelativePosition>
+    <AutoStretch>true</AutoStretch>
+    <LeftAnchorToLeft>true</LeftAnchorToLeft>
+    <RightAnchorToLeft>false</RightAnchorToLeft>
+    <TopAnchorToTop>true</TopAnchorToTop>
+    <BottomAnchorToTop>false</BottomAnchorToTop>
+    <LeftAnchorOffset>8</LeftAnchorOffset>
+    <TopAnchorOffset>67</TopAnchorOffset>
+    <RightAnchorOffset>8</RightAnchorOffset>
+    <BottomAnchorOffset>31</BottomAnchorOffset>
+    <TextColor><R>235</R><G>235</G><B>225</B></TextColor>
+    <Style_Border>true</Style_Border>
+    <Style_VScroll>true</Style_VScroll>
+    <Columns><Width>60</Width><Heading>#</Heading></Columns>
+    <Columns><Width>320</Width><Heading>Name / Field</Heading></Columns>
+    <Columns><Width>180</Width><Heading>Value</Heading></Columns>
+  </Listbox>
+
+  <Label item="Zeal_PVP_Status">
+    <ScreenID>Zeal_PVP_Status</ScreenID>
+    <Font>2</Font>
+    <Text>Ready</Text>
+    <TextColor><R>225</R><G>190</G><B>92</B></TextColor>
+    <Size><CX>600</CX><CY>20</CY></Size>
+    <RelativePosition>true</RelativePosition>
+    <AutoStretch>true</AutoStretch>
+    <LeftAnchorToLeft>true</LeftAnchorToLeft>
+    <RightAnchorToLeft>false</RightAnchorToLeft>
+    <BottomAnchorToTop>false</BottomAnchorToTop>
+    <TopAnchorToTop>false</TopAnchorToTop>
+    <LeftAnchorOffset>8</LeftAnchorOffset>
+    <RightAnchorOffset>8</RightAnchorOffset>
+    <BottomAnchorOffset>6</BottomAnchorOffset>
+  </Label>
+
+  <Screen item="ZealPVP">
+    <RelativePosition>false</RelativePosition>
+    <Location><X>135</X><Y>42</Y></Location>
+    <Size><CX>620</CX><CY>430</CY></Size>
+    <Text>Project Zek PvP</Text>
+    <DrawTemplate>WDT_RoundedNoTitle</DrawTemplate>
+    <Style_Titlebar>false</Style_Titlebar>
+    <Style_Closebox>true</Style_Closebox>
+    <Style_Minimizebox>false</Style_Minimizebox>
+    <Style_Border>true</Style_Border>
+    <Style_Sizable>true</Style_Sizable>
+    <Pieces>Zeal_PVP_Header</Pieces>
+    <Pieces>Zeal_PVP_Overview</Pieces>
+    <Pieces>Zeal_PVP_Points</Pieces>
+    <Pieces>Zeal_PVP_Kills</Pieces>
+    <Pieces>Zeal_PVP_Guilds</Pieces>
+    <Pieces>Zeal_PVP_Teams</Pieces>
+    <Pieces>Zeal_PVP_Info</Pieces>
+    <Pieces>Zeal_PVP_Refresh</Pieces>
+    <Pieces>Zeal_PVP_List</Pieces>
+    <Pieces>Zeal_PVP_Status</Pieces>
+  </Screen>
+</XML>

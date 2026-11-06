@@ -1,0 +1,216 @@
+[Befallen]
+West Commons				-64	+35
+
+[Blackburrow]
+Qeynos Hills				-160	+16
+Everfrost				+95	-340
+Jaggedpine Forest			+157	+144
+
+[Butcherblock Mountains]
+Greater Faydark				+1100	-3000
+Dagnor's Cauldron			-2700	-400
+Kaladim					+2900	-200
+Druid Ring				-2150	+2100
+Docks					+1350	-2400
+Crossroads				+1000	+50
+
+[Castle Mistmoore]
+Lesser Faydark				-347	+126
+
+[Cazic Thule]
+Feerott					+59	-66
+
+[Crushbone]
+Greater Faydark				-644	+158
+Ambassador D'vin			+88	-63
+Emperor Crushbone			+84	-65
+
+[Dagnor's Cauldron]
+Butcherblock Mountains			+2670	+250
+Unrest					-1600	-700
+Kedge Keep				-1000	-1000	Underwater
+
+[East Commonlands]
+West Commonlands			+0	+5020
+Nektulos Forest				+1220	+860
+West Freeport				+0	-1400
+North Ro (Tunnel)			-775	+775
+
+[East Karana]
+North Karana (Wood Bridge)		+10	+840
+Gorge of King Xorbb			+3630	-2020
+High Hold Pass (Ramp)			-360	-3160
+Druid Ring				+1359	+375
+
+[Everfrost]
+Blackburrow				-2500	-350
+Halas					+3200	+600
+Permafrost				+1900	-6500
+
+[Feerott]
+Ogguk					+1400	+880
+Innothule Swamp				-1000	-3000
+Rathe Mountains				+550	+3000
+Cazic Thule				-1200	-60
+Plane of Fear				-1461	+2700	Secret Passage
+Druid Ring				+350	-1800
+
+[Gorge of King Xorbb]
+East Karana				-1200	-460
+Runneye Citadel				+860	-1840
+Evil Eyes Stone				+500	-600
+
+[Greater Faydark]
+Crushbone				+2400	+130
+Butcherblock Mountains			-1640	+2670
+Felwithe				-1940	-2620
+Lesser Faydark				-2620	-1110
+Kelethin				+0	+0
+Wizard Spires				-2000	-400	Nexus
+
+[Highpass Hold]
+East Karana				+840	+110
+Kithicor Forest				-925	+170
+High Keep				-15	-45
+
+[Innothule Swamp]
+South Ro				+2400	+1000
+Feerott					-1000	+1800
+Grobb					-2750	-550
+Guk					+160	-750
+
+[Jaggedpine Forest]
+Blackburrow				+280	+2695	Inside mountain
+Surefall Glade				+1318	+1800
+
+[Kedge Keep]
+// Enduring Breath required
+Phinigel Autropos			Unknown
+
+[Kithicor Forest]
+Riverdale				+1920	+3800
+West Commonlands			+1350	-1000
+Highpass Hold				+450	+4900
+Ranger Guild				+1400	+2300
+
+[Lake Rathetear]
+South Karana				+3800	+1200
+Rathe Mountains				+2600	-1700
+Arena					+2350	+2600
+
+[Lavastorm Mountains]
+Najena					-950	-1000
+Solusek A				+850	+270
+Solusek B				+950	+530
+Temple of Solusek Ro			+1300	+300
+Nektulos Forest				-2120	-200
+Druid Ring				+1000	+1400
+
+[Lesser Faydark]
+Greater Faydark				+2170	-1200
+Steamfont Mountains			+960	-2180
+Castle Mistmoore			-1000	+3300
+Brownies				+1800	+3100
+
+[Misty Thicket]
+Riverdale				+500	-2440
+Runneye Citadel				-840	+1300
+Druid Ring				-500	-1900
+
+[Najena]
+Lavastorm Mountains			-5	+856
+
+[Nektulos Forest]
+Lavastrom Mountains			+3090	+320
+East Commonlands			-2680	-630
+Neriak					+2250	-1100
+Wizard Spires				+425	-750
+
+[Northern Desert of Ro]
+Oasis of Marr				-1850	+0
+East Freeport				+4200	+0
+East Commonlands			+1900	+1400
+Docks					+790	-912	Iceclad Ocean
+Wizard Spires				+1375	+800	Buried
+
+[North Karana]
+South Karana (Stone Bridge)		-4120	+1200
+West Karana				+630	+3200
+East Karana (Wood Bridge)		+0	-2820
+Druid Ring				-2800	-1500
+Wizard Spires				-3700	+1200	Nexus
+Gypsy Camp				-600	-200	Melees may bind here
+
+[Oasis of Marr]
+Southern Desert of Ro			-1850	+0
+Northern Desert of Ro			+2550	+0
+Docks					+900	-800	Timorous Deep
+
+[Ocean of Tears]
+Sisters Island / Docks			+500	-9000	Butcherblock Mountains
+Brothers Island / Docks			-2000	+7500	Freeport East
+Ancient Cyclops Island			+1019	-7940
+Aviak Island				+2000	+4000
+Dinosaur Island				-2800	-1600
+Gargoyle Island				-1029	-6525
+Oracle Island				-450	-8850
+Seafury Island				+2000	-6000
+Sirens Rock				+4000	+200
+
+[Qeynos Hills]
+North Qeynos				-350	+105
+Surefall Glade				+5000	-200
+West Karana				+1250	-2500
+Blackburrow				+3400	-1000
+
+[Rathe Mountains]
+Lake Rathetear				+3400	+3000
+Feerott					+900	-2800
+Hill Giants Valley			+736	+67
+Gems Vendor				+4100	+900
+
+[Runneye Citadel]
+Gorge of King Xorbb			-120	-20
+Misty Thicket				+200	+170
+
+[Southern Desert of Ro]
+Oasis of Marr				+1530	+225
+Innothule Swamp				-3000	+1200
+Druid Ring				-2050	+300
+Wizard Spires				-1050	+150
+
+[South Karana]
+North Karana (Stone Bridge)		+2500	+900
+Lake Rathetear				-8560	+1150
+Infected Paw				-3200	+750
+Aviak City				-6780	+1160
+Centaurs City				+180	-2447
+
+[Steamfont Mountains]
+Ak'Anon					-1800	+550
+Lesser Faydark				-580	+2200
+Druid Ring				-1800	+1670
+Windmill				+0	-400
+
+[Stonebrunt Mountains]
+Warrens					-4000	+3000
+Cat City				+1365	-700
+
+[Toxxulia Forest]
+Paineel					-2350	-300
+Erudin					+2380	+200
+Kerra Ridge				-450	+2450
+Druid Ring				+1100	+350
+Wizard Spires				-1500	-900	Nexus
+
+[West Commonlands]
+East Commonlands			+0	-1650
+Kithicor Forest				+900	+4200
+Befallen				-1100	+550
+Druid Ring				+500	+1400
+Wizard Spires				+0	+1850
+
+[West Karana]
+North Karana				+600	-1600
+Qeynos Hills				+50	+50
+Wizard Spires				-3570	+14810
