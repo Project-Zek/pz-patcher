@@ -1,0 +1,48 @@
+[Plane of Tranquility]
+Plane of Knowledge		+762	-1457
+Bank				Unknown
+// Tier 1
+Plane of Innovation		-1550	+100
+Plane of Disease		1750	-1450
+Plane of Nightmare		-200	-1300
+Plane of Justice		+1	+600
+// Tier 2
+Plane of Storms			-725	-1225
+Plane of Valor			-210	-4
+Crypt of Decay			+1935	-1110
+Plane of Torment		+1880	-1100
+Plane of Tactics		-250	-350
+// Tier 3
+Bastion of Thunder		-698	1763
+Halls of Honor			-200	-10
+Temple of Marr			Unknown
+Tower of Solusek Ro		-600	+1800
+// Tier 4
+Plane of Air			+850	-675
+Plane of Earth			-1350	-2200
+Plane of Fire			+250	-2200
+Plane of Water			-1200	+1000
+// Tier 5
+Plane of Time			-2150	+1225
+
+[Plane of Disease]
+Graveyard			-1247	-1749
+Cave				-2285	-247
+Castle				+146	+1030
+
+[Plane of Nightmare]
+Graveyard			+281	+1679
+Crypt of Terris Thule		+179	-1712	Gaurdians
+Hedge				+1044	-1670
+Docks				Unknown
+Castle				Unknown
+
+[Plane of Storms]
+Graveyard			-2043	-1702
+Plane of Tranquility		-1250	-2425	Tree at the end of cave
+Sea Giants			Unknown
+Desert Giants			Unknown
+Forest Giants			Unknown
+
+[Plane of Valor]
+Graveyard			-1668	+190
